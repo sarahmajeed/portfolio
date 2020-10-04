@@ -12,5 +12,31 @@ module.exports = {
     description: "Web Developer",
   },
   /* Your site config here */
-  plugins: ["gatsby-plugin-sass", "gatsby-plugin-react-helmet"],
+  plugins: [
+    "gatsby-plugin-sass",
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          "gatsby-remark-relative-images",
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 750,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
+    },
+  ],
 }
