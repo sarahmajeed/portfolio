@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   color: white;
+  scroll-behavior: smooth;
 }
 .main {
   background-color: #000000;
@@ -13,19 +14,29 @@
     justify-content: center;
   }
 }
+
+//-------Styling hero page---------
 #hero {
   height: calc(100vh - 15vh);
 }
+
+//-------Styling about page---------
 #about {
   height: 100vh;
   padding: 10px;
-  margin: 10px 200px;
+  margin: 10px 100px;
 
   .grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-areas: ".description .about";
-    margin: 30vh auto;
+    margin: 20vh auto;
+    .description {
+      line-height: 2em;
+      p {
+        margin-bottom: 20px;
+      }
+    }
     .image {
       position: relative;
 
@@ -37,21 +48,22 @@
         width: 300px;
         height: 300px;
         border: 4px solid white;
-        top: -20%;
-        right: -10%;
+        top: 7%;
+        right: -23%;
       }
       .me {
         filter: grayscale(100%);
         position: absolute;
-        top: -30%;
+        // top: -30%;
         z-index: 90;
-        background: #ad8275;
+        animation: image-animate 2s 1;
+        margin-left: 50px;
       }
       &:hover {
         .wrapper {
           border: 4px solid #da937f;
-          top: -25%;
-          right: -5%;
+          top: 5%;
+          right: -20%;
         }
         .me {
           filter: grayscale(0%);
@@ -60,6 +72,29 @@
     }
   }
 }
+
+//-------Styling skills page---------
 #skills {
   height: 100vh;
 }
+
+//-------Styling blogs page---------
+#blog {
+  height: 100vh;
+}
+
+@keyframes image-animate {
+  0% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+//---------Responsiveness ------
+
+@media;

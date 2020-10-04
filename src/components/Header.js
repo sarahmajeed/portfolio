@@ -26,6 +26,9 @@ const Header = () => {
         <Link className="skills" to="#skills">
           Skills
         </Link>
+        <Link className="blog" to="#blog">
+          Blogs
+        </Link>
         <Link className="work" to="#work">
           Work
         </Link>
