@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+.main {
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+}
+#hero {
+  height: calc(100vh - 15vh);
+}
+#about {
+  height: 100vh;
+}
+#skills {
+  height: 100vh;
+}

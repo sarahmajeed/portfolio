@@ -5,6 +5,12 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: "Sarah Majeed",
+    author: "Sarah Majeed",
+    image: "/src/images/image.jpg",
+    description: "Web Developer",
+  },
   /* Your site config here */
-  plugins: [],
+  plugins: ["gatsby-plugin-sass", "gatsby-plugin-react-helmet"],
 }
