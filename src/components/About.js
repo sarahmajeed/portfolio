@@ -3,21 +3,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Sarah from "../content/about/image.jpg"
 
 function About() {
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     allMarkdownRemark {
-  //       edges {
-  //         node {
-  //           frontmatter {
-  //             title
-  //             description
-  //           }
-  //           html
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
   return (
     <div id="about">
       <h1 className="title">About Me</h1>

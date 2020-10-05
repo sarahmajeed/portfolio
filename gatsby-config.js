@@ -10,6 +10,9 @@ module.exports = {
     author: "Sarah Majeed",
     image: "/src/images/image.jpg",
     description: "Web Developer",
+    twitterUsername: "sarahh_dev",
+    githubUsername: "Sarahmdawood",
+    linkedinUsername: "sarahmajeed",
   },
   /* Your site config here */
   plugins: [
@@ -36,6 +39,13 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
   ],

@@ -14,15 +14,36 @@
     justify-content: center;
   }
 }
+.fixed-icons {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 60%;
+
+  padding: 10px;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+  .github,
+  .twitter,
+  .linkedin {
+    margin-bottom: 20px;
+  }
+}
 
 //-------Styling hero page---------
 #hero {
   height: calc(100vh - 15vh);
+  position: relative;
+  .section {
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+  }
 }
 
 //-------Styling about page---------
 #about {
-  height: 100vh;
+  height: 100%;
   padding: 10px;
   margin: 10px 100px;
 
@@ -31,6 +52,7 @@
     grid-template-columns: 2fr 1fr;
     grid-template-areas: ".description .about";
     margin: 20vh auto;
+
     .description {
       line-height: 2em;
       p {
@@ -64,6 +86,7 @@
           border: 4px solid #da937f;
           top: 5%;
           right: -20%;
+          transition: all 0.1s ease-in;
         }
         .me {
           filter: grayscale(0%);
@@ -96,5 +119,17 @@
 }
 
 //---------Responsiveness ------
-
-@media;
+@media (max-width: 1200px) {
+  #about {
+    .grid {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 5px;
+      // align-items: center;
+      justify-content: center;
+      .image {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

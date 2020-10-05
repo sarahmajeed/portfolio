@@ -14,8 +14,10 @@ function Hero() {
   `)
   return (
     <div id="hero">
-      <h1>{data.site.siteMetadata.author}</h1>
-      <h3>{data.site.siteMetadata.description}</h3>
+      <div className="section">
+        <h1 className="name">{data.site.siteMetadata.author}</h1>
+        <h3 className="desc">{data.site.siteMetadata.description}</h3>
+      </div>
     </div>
   )
 }
