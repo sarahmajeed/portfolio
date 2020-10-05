@@ -1,5 +1,12 @@
 import React from "react"
-import { FaFacebook, FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa"
+import {
+  FaFacebook,
+  FaLinkedin,
+  FaTwitter,
+  FaGithub,
+  FaMedium,
+  FaMediumM,
+} from "react-icons/fa"
 import { useStaticQuery, graphql } from "gatsby"
 
 function Icons() {
@@ -41,6 +48,14 @@ function Icons() {
         className="linkedin"
       >
         <FaLinkedin size={32} />
+      </a>
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://medium.com/@sarahmajeed"
+        className="medium"
+      >
+        <FaMediumM size={32} />
       </a>
     </div>
   )

@@ -11,6 +11,9 @@ function Blog() {
               title
               date
             }
+            fields {
+              slug
+            }
           }
         }
       }

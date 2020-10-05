@@ -13,6 +13,7 @@ module.exports = {
     twitterUsername: "sarahh_dev",
     githubUsername: "Sarahmdawood",
     linkedinUsername: "sarahmajeed",
+    mediumUsername: "@sarahmajeed",
   },
   /* Your site config here */
   plugins: [
