@@ -34,6 +34,7 @@
 #hero {
   height: calc(100vh - 15vh);
   position: relative;
+
   .section {
     position: absolute;
     bottom: 20%;
@@ -104,6 +105,7 @@
 //-------Styling blogs page---------
 #blog {
   height: 100vh;
+  margin: 50px;
 }
 
 @keyframes image-animate {

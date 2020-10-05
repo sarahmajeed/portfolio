@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Sarah from "../content/about/image.jpg"
+import Sarah from "./images/sarah.jpg"
 
 function About() {
   return (
