@@ -7,6 +7,9 @@ import About from "../components/about"
 import Skills from "../components/Skills"
 import Blog from "../components/blog"
 import Icons from "../components/Icons"
+import Work from "../components/work"
+import Contact from "../components/Contact"
+import Footer from "../components/Footer"
 export default function Home() {
   return (
     <div className="main">
@@ -19,6 +22,9 @@ export default function Home() {
 
         <Skills />
         <Blog />
+        <Work />
+        <Contact />
+        <Footer />
       </Layout>
     </div>
   )

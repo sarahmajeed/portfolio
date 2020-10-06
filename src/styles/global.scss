@@ -19,6 +19,7 @@
   display: flex;
   flex-direction: column;
   top: 60%;
+  z-index: 90;
 
   padding: 10px;
   border-top-right-radius: 10%;
@@ -105,7 +106,52 @@
 //-------Styling blogs page---------
 #blog {
   height: 100vh;
-  margin: 50px;
+}
+
+//-------Styling work page---------
+#work {
+  height: 100vh;
+}
+//-------Styling contact page---------
+#contact {
+  height: 100vh;
+  background: white;
+  .image {
+    height: 100vh;
+    width: 70vw;
+    position: relative;
+
+    img {
+      height: 100vh;
+      width: 70vw;
+    }
+    .layer {
+      position: absolute;
+      top: 0;
+      height: 100vh;
+      width: 70vw;
+      background-image: linear-gradient(
+        to right bottom,
+        rgba(248, 255, 229, 0.3),
+        rgba(242, 116, 93, 0.9)
+      );
+    }
+    .contact-box {
+      position: absolute;
+      top: 20%;
+      left: 60%;
+      height: 400px;
+      width: 500px;
+      padding: 3rem 4rem;
+      background-color: rgba(31, 32, 43, 0.98);
+      opacity: 0.9;
+    }
+  }
+}
+
+.footer {
+  height: 30vh;
+  border: 2px solid red;
 }
 
 @keyframes image-animate {

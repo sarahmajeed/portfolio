@@ -2,27 +2,27 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 function Blog() {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              title
-              date
-            }
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     allMarkdownRemark {
+  //       edges {
+  //         node {
+  //           frontmatter {
+  //             title
+  //             date
+  //           }
+  //           fields {
+  //             slug
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
   return (
     <div id="blog">
       <h1 className="title">Blogs</h1>
-      <ol>
+      {/* <ol>
         {data.allMarkdownRemark.edges.map(edge => {
           return (
             <li>
@@ -31,7 +31,7 @@ function Blog() {
             </li>
           )
         })}
-      </ol>
+      </ol> */}
     </div>
   )
 }
