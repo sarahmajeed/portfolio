@@ -15,19 +15,15 @@
   }
 }
 .fixed-icons {
-  position: fixed;
   display: flex;
-  flex-direction: column;
-  top: 60%;
-  z-index: 90;
+  flex-direction: row;
 
   padding: 10px;
-  border-top-right-radius: 10%;
-  border-bottom-right-radius: 10%;
+
   .github,
   .twitter,
   .linkedin {
-    margin-bottom: 20px;
+    margin-right: 20px;
   }
 }
 
@@ -48,6 +44,7 @@
   height: 100%;
   padding: 10px;
   margin: 10px 100px;
+  animation: about-para 3s;
 
   .grid {
     display: grid;
@@ -130,11 +127,15 @@
       top: 0;
       height: 100vh;
       width: 70vw;
-      background-image: linear-gradient(
-        to right bottom,
-        rgba(248, 255, 229, 0.3),
-        rgba(242, 116, 93, 0.9)
-      );
+      background-color: #6b0f1a;
+      background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
+
+      opacity: 0.5;
+      .home {
+        position: absolute;
+        bottom: 2%;
+        left: 5%;
+      }
     }
     .contact-box {
       position: absolute;
@@ -147,11 +148,6 @@
       opacity: 0.9;
     }
   }
-}
-
-.footer {
-  height: 30vh;
-  border: 2px solid red;
 }
 
 @keyframes image-animate {
@@ -179,5 +175,11 @@
         margin-bottom: 30px;
       }
     }
+  }
+}
+
+@keyframes about-para {
+  0% {
+    opacity: 0;
   }
 }

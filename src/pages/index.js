@@ -15,7 +15,7 @@ export default function Home() {
     <div className="main">
       <Layout>
         <Head />
-        <Icons />
+
         <Hero />
 
         <About />
@@ -24,7 +24,6 @@ export default function Home() {
         <Blog />
         <Work />
         <Contact />
-        <Footer />
       </Layout>
     </div>
   )
