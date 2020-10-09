@@ -5,9 +5,21 @@ import Sarah from "./images/sarah.jpg"
 function About() {
   return (
     <div id="about">
-      <h1 className="title">About Me</h1>
+      <h1
+        data-sal="fade"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+        className="title"
+      >
+        About Me
+      </h1>
       <div className="grid">
-        <div className="description">
+        <div
+          data-sal="fade"
+          data-sal-delay="300"
+          data-sal-easing="ease-in"
+          className="description"
+        >
           <p>
             Hello! I am Sarah Majeed, an undergraduate software engineer based
             in Karachi, Pakistan.{" "}
@@ -30,16 +42,6 @@ function About() {
             absolutely love reading books and writing random excerpts. I also
             enjoy my time outdoors be it a long drive or a park visit!{" "}
           </p>
-        </div>
-        <div className="image">
-          <img
-            className="me"
-            height="300px"
-            width="300px"
-            src={Sarah}
-            alt="Sarah"
-          />
-          <div className="wrapper"></div>
         </div>
       </div>
     </div>
