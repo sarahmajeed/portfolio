@@ -1,25 +1,14 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Sarah from "./images/sarah.jpg"
+import "../styles/global.scss"
+import Layout from "../components/Layout"
 
 function About() {
   return (
-    <div id="about">
-      <h1
-        data-sal="fade"
-        data-sal-delay="300"
-        data-sal-easing="ease"
-        className="title"
-      >
-        About Me
-      </h1>
-      <div className="grid">
-        <div
-          data-sal="fade"
-          data-sal-delay="300"
-          data-sal-easing="ease-in"
-          className="description"
-        >
+    <div className="main" id="about">
+      <Layout>
+        <h1>About Me</h1>
+
+        <div>
           <p>
             Hello! I am Sarah Majeed, an undergraduate software engineer based
             in Karachi, Pakistan.{" "}
@@ -43,7 +32,7 @@ function About() {
             enjoy my time outdoors be it a long drive or a park visit!{" "}
           </p>
         </div>
-      </div>
+      </Layout>
     </div>
   )
 }

@@ -10,6 +10,13 @@ function Hero() {
           description
         }
       }
+      allFile(filter: { extension: { eq: "pdf" } }) {
+        edges {
+          node {
+            publicURL
+          }
+        }
+      }
     }
   `)
   return (
@@ -23,9 +30,13 @@ function Hero() {
         </p>
       </div>
       <div className="button">
-        <a href="SarahMajeed.pdf">
-          <div className="btn">Download Resume.</div>
-        </a>
+        {data.allFile.edges.map(file => {
+          return (
+            <a download href={file.node.publicURL}>
+              <div className="btn">Download Resume.</div>
+            </a>
+          )
+        })}
 
         <a href="mailto:sarahmajeed368@gmail.com">
           <div className="btn">Get in touch.</div>

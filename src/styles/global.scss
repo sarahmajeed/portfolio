@@ -27,9 +27,16 @@
   }
 }
 
+.footer {
+  height: 5vh;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 0.6em;
+}
+
 //-------Styling hero page---------
 #hero {
-  height: calc(100vh - 15vh);
+  height: calc(100vh - 15vh - 5vh);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,56 +80,19 @@
 
 //-------Styling about page---------
 #about {
-  height: 100%;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+
   padding: 10px;
-  margin: 10px 100px;
+
   animation: about-para 3s;
 
-  .grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: ".description .about";
-    margin: 20vh auto;
+  // margin: 20vh auto;
 
-    .description {
-      line-height: 2em;
-      p {
-        margin-bottom: 20px;
-      }
-    }
-    .image {
-      position: relative;
-
-      width: 300px;
-      height: 300px;
-      .wrapper {
-        position: absolute;
-        display: block;
-        width: 300px;
-        height: 300px;
-        border: 4px solid white;
-        top: 7%;
-        right: -23%;
-      }
-      .me {
-        filter: grayscale(100%);
-        position: absolute;
-        // top: -30%;
-        z-index: 90;
-        animation: image-animate 2s 1;
-        margin-left: 50px;
-      }
-      &:hover {
-        .wrapper {
-          border: 4px solid #da937f;
-          top: 5%;
-          right: -20%;
-          transition: all 0.1s ease-in;
-        }
-        .me {
-          filter: grayscale(0%);
-        }
-      }
+  .description {
+    line-height: 2em;
+    p {
+      margin-bottom: 20px;
     }
   }
 }
