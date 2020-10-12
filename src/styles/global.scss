@@ -12,6 +12,7 @@
   .title {
     display: flex;
     justify-content: center;
+    margin-bottom: 60px;
   }
 }
 .fixed-icons {
@@ -27,16 +28,9 @@
   }
 }
 
-.footer {
-  height: 5vh;
-
-  letter-spacing: 2px;
-  font-size: 0.6em;
-}
-
 //-------Styling hero page---------
 #hero {
-  height: calc(100vh - 15vh - 5vh);
+  height: calc(100vh - 15vh);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,10 +78,6 @@
   height: 100vh;
 
   padding: 10px;
-
-  animation: about-para 3s;
-
-  // margin: 20vh auto;
 
   .description {
     line-height: 2em;
@@ -152,36 +142,4 @@
   }
 }
 
-@keyframes image-animate {
-  0% {
-    transform: translateY(20px);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
 //---------Responsiveness ------
-@media (max-width: 1200px) {
-  #about {
-    .grid {
-      display: flex;
-      flex-direction: column-reverse;
-      margin-top: 5px;
-      // align-items: center;
-      justify-content: center;
-      .image {
-        margin-bottom: 30px;
-      }
-    }
-  }
-}
-
-@keyframes about-para {
-  0% {
-    opacity: 0;
-  }
-}
