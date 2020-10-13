@@ -24,6 +24,7 @@ function Icons() {
   return (
     <div className="fixed-icons">
       <a
+        className="git"
         rel="noopener noreferrer"
         target="_blank"
         href={`https://github.com/${data.site.siteMetadata.githubUsername}`}

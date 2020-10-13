@@ -7,6 +7,7 @@
   scroll-behavior: smooth;
 }
 .main {
+  position: relative;
   background-color: #000000;
   background-image: linear-gradient(147deg, #000000 10%, #04619f 90%);
   .title {
@@ -99,7 +100,67 @@
 
 //-------Styling work page---------
 #work {
-  height: 100vh;
+  height: 300vh;
+  .project-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 200px;
+    margin-bottom: 100px;
+    .img-wrapper {
+      position: relative;
+      margin: 10px 20px;
+      height: 400px;
+      width: 500px;
+      transition: all 3s ease-out;
+
+      &:hover {
+        cursor: pointer;
+        .plain {
+          top: -4%;
+          left: 2%;
+          border: 4px solid #81003d;
+        }
+        .img {
+          filter: grayscale(0);
+          border: 4px solid white;
+        }
+      }
+      .plain {
+        display: block;
+        position: absolute;
+        top: -5%;
+        height: 400px;
+        width: 500px;
+        border: 4px solid white;
+      }
+      .img {
+        height: 400px;
+        width: 500px;
+        margin-left: 30px;
+        filter: grayscale(100%);
+      }
+    }
+    .text {
+      padding: 50px;
+      width: 600px;
+      background-color: #81003d;
+      opacity: 0.5;
+      p {
+        margin-bottom: 10px;
+      }
+      .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.5em;
+
+        .git {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
 }
 //-------Styling contact page---------
 #contact {
