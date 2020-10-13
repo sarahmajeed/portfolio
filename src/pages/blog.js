@@ -3,37 +3,39 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/Layout"
 
 function Blog() {
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     allMarkdownRemark {
-  //       edges {
-  //         node {
-  //           frontmatter {
-  //             title
-  //             date
-  //           }
-  //           fields {
-  //             slug
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              title
+              date
+            }
+            excerpt
+          }
+        }
+      }
+    }
+  `)
   return (
     <div id="blog" className="main">
       <Layout>
         <h1 className="title">Blogs</h1>
-        {/* <ol>
-        {data.allMarkdownRemark.edges.map(edge => {
-          return (
-            <li>
-              <h1>{edge.node.frontmatter.title}</h1>
-              <p>{edge.node.frontmatter.date}</p>
-            </li>
-          )
-        })}
-      </ol> */}
+        <ol>
+          {data.allMarkdownRemark.edges.map(edge => {
+            return (
+              <div className="blog-wrapper">
+                <div className="blog-card">
+                  <h1 className="head">{edge.node.frontmatter.title}</h1>
+                  <p className="date">{edge.node.frontmatter.date}</p>
+                  <p className="excerpt">{edge.node.excerpt}</p>
+                  <button className="btn">Read More ></button>
+                </div>
+              </div>
+            )
+          })}
+        </ol>
       </Layout>
     </div>
   )

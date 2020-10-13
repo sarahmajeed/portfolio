@@ -22,11 +22,12 @@
       font-size: 1em;
       margin-right: 10px;
       &:hover {
-        color: grey;
-      }
-      &:active {
-        color: grey;
+        color: darkgrey;
       }
     }
   }
+}
+
+.currentLink {
+  color: grey;
 }
