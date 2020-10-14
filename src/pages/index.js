@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="main">
       <Layout>
-        <Head />
+        <Head title="Home" />
 
         <Hero />
       </Layout>

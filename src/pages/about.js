@@ -1,11 +1,13 @@
 import React from "react"
 import "../styles/global.scss"
 import Layout from "../components/Layout"
+import Head from "../components/head"
 
 function About() {
   return (
     <div className="main" id="about">
       <Layout>
+        <Head title="About" />
         <h1 className="title">About Me</h1>
 
         <div>

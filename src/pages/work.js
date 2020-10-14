@@ -4,11 +4,13 @@ import elegantclothing from "../components/images/elegantclothing.jpeg"
 import facedetection from "../components/images/facedetection.jpeg"
 import weatherforecast from "../components/images/weatherforecast.jpeg"
 import { FaStar, FaGithub, FaArrowRight, FaLink } from "react-icons/fa"
+import Head from "../components/head"
 
 function Work() {
   return (
     <div id="work" className="main">
       <Layout>
+        <Head title="Work" />
         <h1 className="title">My projects</h1>
         <a
           rel="noopener noreferrer"

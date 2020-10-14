@@ -3,11 +3,13 @@ import Laptop from "../components/images/laptop.jpg"
 import { FaHome } from "react-icons/fa"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
+import Head from "../components/head"
 
 function Contact() {
   return (
     <div id="contact" className="main">
       <Layout>
+        <Head title="Contact" />
         <div className="image">
           <img src={Laptop} alt="" />
           <div className="layer">
