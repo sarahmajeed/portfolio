@@ -28,7 +28,7 @@ function About() {
             continuing to grow in these areas with time , practice, experience
             and learning.
           </p>
-          <p>
+          <p className="last-para">
             Apart from coding, which takes up major chunk of my day, I
             absolutely love reading books and writing random excerpts. I also
             enjoy my time outdoors be it a long drive or a park visit!{" "}

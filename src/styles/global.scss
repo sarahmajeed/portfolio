@@ -9,10 +9,11 @@
 .main {
   position: relative;
   background-color: #000000;
-  background-image: linear-gradient(147deg, #000000 10%, #04619f 90%);
+  background-image: linear-gradient(147deg, #000000 10%, #243447 90%);
   .title {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
     margin-bottom: 80px;
   }
 }
@@ -76,15 +77,19 @@
 //-------Styling about page---------
 #about {
   font-family: "Poppins", sans-serif;
-  height: 100vh;
+  height: 100%;
 
   padding: 10px;
+
   div p {
     margin: 20px auto;
 
-    width: 700px;
+    width: 300px;
 
     line-height: 2em;
+  }
+  .last-para {
+    margin-bottom: 100px;
   }
 }
 
@@ -236,50 +241,25 @@
 }
 
 //---------Responsiveness ------
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .main {
     border: 10px solid red;
   }
-  #hero {
-    height: calc(100vh - 15vh);
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    .name {
-      letter-spacing: 4px;
-      margin-bottom: 10px;
-      font-size: 1em;
-    }
-    .section {
-      width: 600px;
-    }
-    .desc {
-      letter-spacing: 2px;
-    }
-    a {
-      text-decoration: none;
-    }
-    .button {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: row;
 
-      .btn {
-        padding: 20px;
+  #about {
+    font-family: "Poppins", sans-serif;
+    height: 100%;
 
-        background: #81003d;
-        margin-right: 10px;
-        width: 250px;
-        text-align: center;
-        transition: all 0.2s;
-        &:hover {
-          cursor: pointer;
-          background-color: #000000;
-          background-image: linear-gradient(147deg, #04619f 10%, #000000 90%);
-          transform: translateY(-2%);
-        }
-      }
+    padding: 10px;
+    div p {
+      margin: 20px auto;
+
+      width: 700px;
+
+      line-height: 2em;
+    }
+    .last-para {
+      margin-bottom: 100px;
     }
   }
 }

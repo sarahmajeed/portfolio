@@ -10,6 +10,19 @@
     text-decoration: none;
     margin: 10px;
     padding: 10px;
+    #hidden-burger {
+      span {
+        display: block;
+        height: 2px;
+        width: 25px;
+        background-color: white;
+        margin-bottom: 4px;
+        transition: all 0.3s ease-out;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
 
     .about,
     .work,
@@ -17,6 +30,23 @@
     .contact,
     .blog,
     .home {
+      display: none;
+    }
+  }
+}
+
+.currentLink {
+  color: grey;
+}
+@media only screen and (min-width: 768px) {
+  .links {
+    .about,
+    .work,
+    .skills,
+    .contact,
+    .blog,
+    .home {
+      display: block;
       text-decoration: none;
       color: white;
       font-size: 1em;
@@ -28,6 +58,14 @@
   }
 }
 
-.currentLink {
-  color: grey;
+.after-click {
+  .top {
+    transform: rotate(-45deg) translate(-4px, 6px);
+  }
+  .middle {
+    opacity: 0;
+  }
+  .bottom {
+    transform: rotate(45deg) translate(-2px, -4px);
+  }
 }

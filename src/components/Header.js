@@ -5,6 +5,13 @@ import "./Header.scss"
 import Icons from "./Icons"
 
 const Header = () => {
+  const openNav = () => {
+    console.log("Opening it dude!")
+    let v = document
+      .getElementById("hidden-burger")
+      .classList.toggle("after-click")
+    console.log(v)
+  }
   return (
     <div className="nav">
       <div className="fixed-icons">
@@ -12,6 +19,11 @@ const Header = () => {
       </div>
 
       <div className="links">
+        <div onClick={openNav} id="hidden-burger">
+          <span className="top"></span>
+          <span className="middle"></span>
+          <span className="bottom"></span>
+        </div>
         <Link className="home" to="/">
           Home
         </Link>
