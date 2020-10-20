@@ -5,13 +5,15 @@ import "./Header.scss"
 import Icons from "./Icons"
 
 const Header = () => {
-  const openNav = () => {
-    console.log("Opening it dude!")
-    let v = document
-      .getElementById("hidden-burger")
-      .classList.toggle("after-click")
-    console.log(v)
-  }
+  // const openNav = () => {
+  //   console.log("Opening it dude!")
+  //   let v = document
+  //     .getElementById("hidden-burger")
+  //     .classList.toggle("after-click")
+  //   console.log(v)
+  //   document.getElementById("link-lists").classList.toggle("link-show")
+  //   document.getElementById("link-lists").classList.toggle("main")
+  // }
   return (
     <div className="nav">
       <div className="fixed-icons">
@@ -19,11 +21,7 @@ const Header = () => {
       </div>
 
       <div className="links">
-        <div onClick={openNav} id="hidden-burger">
-          <span className="top"></span>
-          <span className="middle"></span>
-          <span className="bottom"></span>
-        </div>
+        <span className="hidden">></span>
         <Link className="home" to="/">
           Home
         </Link>
@@ -43,6 +41,12 @@ const Header = () => {
           {" "}
           Contact
         </Link>
+
+        {/* <div onClick={openNav} id="hidden-burger">
+          <span className="top"></span>
+          <span className="middle"></span>
+          <span className="bottom"></span>
+        </div> */}
       </div>
     </div>
   )

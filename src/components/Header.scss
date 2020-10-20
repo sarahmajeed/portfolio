@@ -1,36 +1,24 @@
 .nav {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  height: 15vh;
-
+  flex-direction: column;
   .links {
-    text-decoration: none;
-    margin: 10px;
-    padding: 10px;
-    #hidden-burger {
-      span {
-        display: block;
-        height: 2px;
-        width: 25px;
-        background-color: white;
-        margin-bottom: 4px;
-        transition: all 0.3s ease-out;
-      }
-      &:hover {
-        cursor: pointer;
-      }
-    }
+    display: flex;
+    align-items: center;
 
-    .about,
-    .work,
-    .skills,
-    .contact,
-    .blog,
-    .home {
-      display: none;
+    margin-left: 15px;
+  }
+
+  .work,
+  .skills,
+  .contact,
+  .blog,
+  .home,
+  .about {
+    text-decoration: none;
+    margin: 2px;
+    padding: 1px;
+    &:hover {
+      color: darkgrey;
     }
   }
 }
@@ -39,20 +27,35 @@
   color: grey;
 }
 @media only screen and (min-width: 768px) {
-  .links {
-    .about,
-    .work,
-    .skills,
-    .contact,
-    .blog,
-    .home {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 15vh;
+    width: 100%;
+    .links {
       display: block;
       text-decoration: none;
-      color: white;
-      font-size: 1em;
-      margin-right: 10px;
-      &:hover {
-        color: darkgrey;
+      margin: 10px;
+      padding: 10px;
+      span {
+        display: none;
+      }
+      .about,
+      .work,
+      .skills,
+      .contact,
+      .blog,
+      .home {
+        text-decoration: none;
+        color: white;
+        font-size: 1em;
+        margin-right: 10px;
+        &:hover {
+          color: darkgrey;
+        }
       }
     }
   }
@@ -68,4 +71,10 @@
   .bottom {
     transform: rotate(45deg) translate(-2px, -4px);
   }
+}
+.link-show {
+  transform: translateX(500%);
+  background: white;
+  opacity: 0.9;
+  right: 0;
 }

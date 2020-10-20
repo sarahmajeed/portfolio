@@ -10,6 +10,7 @@
   position: relative;
   background-color: #000000;
   background-image: linear-gradient(147deg, #000000 10%, #243447 90%);
+  overflow-x: hidden;
   .title {
     display: flex;
     justify-content: center;
@@ -38,15 +39,17 @@
   justify-content: center;
   align-items: center;
   .name {
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     margin-bottom: 10px;
-    font-size: 3em;
+    font-size: 2em;
+    margin-left: 10px;
   }
   .section {
     width: 600px;
   }
   .desc {
     letter-spacing: 2px;
+    margin-left: 10px;
   }
   a {
     text-decoration: none;
@@ -55,13 +58,14 @@
     margin-top: 30px;
     display: flex;
     flex-direction: row;
+    margin-left: -152px;
 
     .btn {
-      padding: 20px;
-
+      padding: 10px;
+      font-size: 0.8em;
       background: #81003d;
       margin-right: 10px;
-      width: 250px;
+      width: 200px;
       text-align: center;
       transition: all 0.2s;
       &:hover {
@@ -245,7 +249,52 @@
   .main {
     border: 10px solid red;
   }
+  #hero {
+    height: calc(100vh - 15vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+    .name {
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+      font-size: 3em;
+      margin-left: 0px;
+    }
+    .section {
+      width: 600px;
+    }
+    .desc {
+      margin-left: 0px;
+      letter-spacing: 2px;
+    }
+    a {
+      text-decoration: none;
+    }
+    .button {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      margin-left: 0px;
+
+      .btn {
+        padding: 20px;
+
+        background: #81003d;
+        margin-right: 10px;
+        width: 250px;
+        text-align: center;
+        transition: all 0.2s;
+        &:hover {
+          cursor: pointer;
+          background-color: #000000;
+          background-image: linear-gradient(147deg, #04619f 10%, #000000 90%);
+          transform: translateY(-2%);
+        }
+      }
+    }
+  }
   #about {
     font-family: "Poppins", sans-serif;
     height: 100%;
