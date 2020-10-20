@@ -4,13 +4,26 @@ import Layout from "../components/Layout"
 import Head from "../components/head"
 
 function About() {
+  const handleAbout = () => {
+    const v = document
+      .getElementById("about-me")
+      .classList.toggle("handle-about")
+    console.log(v)
+  }
   return (
     <div className="main" id="about">
       <Layout>
         <Head title="About" />
-        <h1 className="title">About Me</h1>
-
-        <div>
+        <div className="tags">
+          <div onClick={handleAbout} className="about-tag">
+            About Me
+          </div>
+          <div className="education-tag">Education</div>
+          <div className="blog-tag">Blogs</div>
+          <div className="community-tag">Community building</div>
+          <div className="interest-tag">My interests</div>
+        </div>
+        <div id="about-me">
           <p>
             Hello! I am Sarah Majeed, an undergraduate software engineer based
             in Karachi, Pakistan.{" "}
@@ -28,6 +41,17 @@ function About() {
             continuing to grow in these areas with time , practice, experience
             and learning.
           </p>
+        </div>
+        <div id="education">
+          <p>Mama Parsi</p>
+        </div>
+        <div id="blog-writing">
+          <p>write blogs</p>
+        </div>
+        <div id="community-work">
+          <p>MLSA</p>
+        </div>
+        <div id="other-interests">
           <p className="last-para">
             Apart from coding, which takes up major chunk of my day, I
             absolutely love reading books and writing random excerpts. I also
