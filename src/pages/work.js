@@ -51,7 +51,7 @@ function Work() {
                 A PERN Stack e-commerce application that helps people shop
                 online
               </p>
-              <p>Key Features:</p>
+              {/* <p>Key Features:</p>
 
               <p>
                 <FaArrowRight /> Display of entire collection with prices
@@ -65,7 +65,7 @@ function Work() {
               </p>
               <p>
                 <FaArrowRight /> Download receipt after payment
-              </p>
+              </p> */}
             </div>
           </div>
         </a>

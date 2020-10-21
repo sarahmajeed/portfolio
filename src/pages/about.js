@@ -2,28 +2,32 @@ import React from "react"
 import "../styles/global.scss"
 import Layout from "../components/Layout"
 import Head from "../components/head"
+import { Link } from "gatsby"
 
 function About() {
-  const handleAbout = () => {
-    const v = document
-      .getElementById("about-me")
-      .classList.toggle("handle-about")
-    console.log(v)
-  }
   return (
     <div className="main" id="about">
       <Layout>
         <Head title="About" />
         <div className="tags">
-          <div onClick={handleAbout} className="about-tag">
-            About Me
-          </div>
-          <div className="education-tag">Education</div>
-          <div className="blog-tag">Blogs</div>
-          <div className="community-tag">Community building</div>
-          <div className="interest-tag">My interests</div>
+          <Link to="#about-me">
+            <div className="about-tag">About Me</div>
+          </Link>
+          <Link to="#education">
+            <div className="education-tag">Education</div>
+          </Link>
+          <Link to="#blog-writing">
+            <div className="blog-tag">Blogs</div>
+          </Link>
+          <Link to="#community-work">
+            <div className="community-tag">Community building</div>
+          </Link>
+          <Link to="#other-interests">
+            <div className="interest-tag">My interests</div>
+          </Link>
         </div>
         <div id="about-me">
+          <p>About Me</p>
           <p>
             Hello! I am Sarah Majeed, an undergraduate software engineer based
             in Karachi, Pakistan.{" "}
