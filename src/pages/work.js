@@ -76,11 +76,15 @@ function Work() {
           href="https://facedetectionhub.web.app/"
         >
           <div className="project-wrapper">
-            <div className="img-wrapper">
+            <div
+              data-sal="slide-left"
+              data-sal-delay="300"
+              className="img-wrapper"
+            >
               <div className="plain"></div>
               <img className="img" src={facedetection} alt="elegant clothing" />
             </div>
-            <div className="text">
+            <div className="text" data-sal="slide-left" data-sal-delay="300">
               <p className="header">
                 Face Recognition - Version 1.0
                 <div className="icns">
@@ -130,7 +134,11 @@ function Work() {
           href="https://weatherforecastapp-f3371.web.app/"
         >
           <div className="project-wrapper">
-            <div className="img-wrapper">
+            <div
+              className="img-wrapper"
+              data-sal="slide-left"
+              data-sal-delay="300"
+            >
               <div className="plain"></div>
               <img
                 className="img"
@@ -138,7 +146,7 @@ function Work() {
                 alt="elegant clothing"
               />
             </div>
-            <div className="text">
+            <div className="text" data-sal="slide-right" data-sal-delay="300">
               <p className="header">
                 weatherforecast
                 <div className="icns">

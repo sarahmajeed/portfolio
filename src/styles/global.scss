@@ -33,7 +33,7 @@
 
 //-------Styling hero page---------
 #hero {
-  height: calc(100vh - 17.7vh);
+  height: calc(100vh - 15vh);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -181,6 +181,7 @@
         height: 200px;
         width: 400px;
         border: 4px solid white;
+        animation: imageanimation 0.5s 1;
       }
       .img {
         height: 200px;
@@ -373,5 +374,21 @@
     .last-para {
       margin-bottom: 100px;
     }
+  }
+}
+
+//ANIMATIONS
+@keyframes imageanimation {
+  0% {
+    transform: translateY(20%);
+  }
+  25% {
+    transform: translateY(5%);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
