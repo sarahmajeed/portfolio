@@ -4,6 +4,7 @@ import { FaHome } from "react-icons/fa"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import Head from "../components/head"
+import { FaLinkedin, FaGoogle, FaTwitter } from "react-icons/fa"
 
 function Contact() {
   return (
@@ -18,11 +19,17 @@ function Contact() {
             </Link>
           </div>
           <div className="contact-box">
-            <h1 className="title">Contact Me</h1>
-            <h3>Location</h3>
-            <h4>Karachi, Pakistan</h4>
-            <h3>Email</h3>
-            <h4>sarahmajeed368@gmail.com</h4>
+            <div className="head">
+              <h1>Start a project</h1>
+              <div className="fixed-icons">
+                <FaLinkedin />
+                <FaGoogle />
+                <FaTwitter />
+              </div>
+            </div>
+
+            <p>Interested in working together? We should queue up a chat</p>
+            <div className="btn">Wan't to chat</div>
           </div>
         </div>
       </Layout>

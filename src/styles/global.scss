@@ -6,6 +6,21 @@
   color: white;
   scroll-behavior: smooth;
 }
+.btn {
+  padding: 10px;
+  font-size: 0.8em;
+  background: #81003d;
+  margin-right: 10px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.2s;
+  &:hover {
+    cursor: pointer;
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #04619f 10%, #000000 90%);
+    transform: translateY(-2%);
+  }
+}
 .main {
   position: relative;
   background-color: #000000;
@@ -15,7 +30,7 @@
     display: flex;
     justify-content: center;
     margin-top: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
   }
 }
 .fixed-icons {
@@ -81,12 +96,56 @@
 //-------Styling about page---------
 #about {
   font-family: "Poppins", sans-serif;
-  height: 100vh;
+  height: 100%;
 
   padding: 10px;
 
   .tags {
     display: none;
+  }
+  .span {
+    display: block;
+    height: 1px;
+    width: 200px;
+    background-color: white;
+  }
+  #about-me {
+    height: 100vh;
+    p {
+      margin-bottom: 10px;
+    }
+    .head {
+      margin: 30px 0;
+      font-size: 2em;
+    }
+  }
+  #education,
+  #blog-writing,
+  #community-work,
+  #other-interests {
+    height: 100vh;
+    p {
+      margin-bottom: 10px;
+    }
+    .head {
+      // margin: 0px 0;
+      font-size: 2em;
+    }
+  }
+  #blog-writing {
+    .span {
+      width: 220px;
+    }
+  }
+  #community-work {
+    .span {
+      width: 370px;
+    }
+  }
+  #other-interests {
+    .span {
+      width: 350px;
+    }
   }
 
   #about-me,
@@ -94,7 +153,7 @@
   #blog-writing,
   #community-work,
   #other-interests {
-    margin: 10px;
+    margin: 20px;
 
     width: 500px;
   }
@@ -150,17 +209,19 @@
     text-decoration: none;
   }
   .project-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+
+    flex-direction: column;
     align-items: center;
-    gap: 50px;
+    // align-items: center;
+
     margin-bottom: 200px;
     .img-wrapper {
       position: relative;
-      margin: 10px 20px;
-      height: 400px;
-      width: 500px;
-      transition: all 3s ease-out;
+      margin-bottom: 30px;
+      height: 200px;
+      width: 450px;
+      transition: all 0.5s ease-out;
 
       &:hover {
         cursor: pointer;
@@ -175,13 +236,13 @@
         }
       }
       .plain {
-        display: block;
-        position: absolute;
-        top: -5%;
-        height: 200px;
-        width: 400px;
-        border: 4px solid white;
-        animation: imageanimation 0.5s 1;
+        display: none;
+        // position: absolute;
+        // top: -5%;
+        // height: 200px;
+        // width: 400px;
+        // border: 4px solid white;
+        // animation: imageanimation 0.5s 1;
       }
       .img {
         height: 200px;
@@ -191,8 +252,9 @@
       }
     }
     .text {
-      padding: 50px;
-      width: 600px;
+      width: 500px;
+      //margin: 10px 0px;
+      padding: 20px;
       background-color: rgba(129, 0, 61, 0.5);
 
       p {
@@ -250,6 +312,15 @@
       padding: 3rem 4rem;
       background-color: rgba(31, 32, 43, 0.98);
       opacity: 0.9;
+      .head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .icons {
+          margin-top: 30px;
+        }
+      }
     }
   }
 }
@@ -304,6 +375,76 @@
       }
     }
   }
+  #work {
+    height: 100%;
+    width: 100%;
+    a {
+      text-decoration: none;
+    }
+    .project-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+      gap: 50px;
+      margin-bottom: 200px;
+      .img-wrapper {
+        position: relative;
+        margin: 10px 20px;
+        height: 400px;
+        width: 500px;
+        transition: all 0.5s ease-out;
+
+        &:hover {
+          cursor: pointer;
+          .plain {
+            top: -4%;
+            left: 2%;
+            border: 4px solid #81003d;
+          }
+          .img {
+            filter: grayscale(0);
+            border: 4px solid white;
+          }
+        }
+        .plain {
+          display: block;
+          position: absolute;
+          top: -5%;
+          height: 200px;
+          width: 400px;
+          border: 4px solid white;
+          animation: imageanimation 0.5s 1;
+        }
+        .img {
+          height: 200px;
+          width: 400px;
+          margin-left: 30px;
+          filter: grayscale(100%);
+        }
+      }
+      .text {
+        padding: 50px;
+        width: 600px;
+        background-color: rgba(129, 0, 61, 0.5);
+
+        p {
+          color: white;
+          margin-bottom: 10px;
+          opacity: 1;
+        }
+        .header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-size: 1.5em;
+
+          .git {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
   #about {
     font-family: "Poppins", sans-serif;
     height: 100vh;
@@ -314,11 +455,14 @@
       display: block;
       margin-bottom: 200px;
       position: fixed;
-      top: 150px;
+      top: 30%;
       text-decoration: none;
 
       .about-tag {
         background: darkorange;
+        .aboutt {
+          text-decoration: none;
+        }
       }
       .education-tag {
         background: darkmagenta;
@@ -346,6 +490,7 @@
         border-radius: 0 8px 8px 0;
         border: 1px solid #666;
         margin-bottom: 20px;
+        text-decoration: none;
 
         &:hover {
           background: transparent;
@@ -361,13 +506,16 @@
     #other-interests {
       margin: 10px;
       height: 100vh;
+      display: flex;
+      flex-direction: column;
 
+      justify-content: center;
       width: 500px;
       margin-left: 500px;
     }
     #about-me {
       margin: 10px;
-      height: calc(100vh- 15vh);
+      height: 100vh;
       width: 500px;
       margin-left: 500px;
     }
