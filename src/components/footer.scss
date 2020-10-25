@@ -1,21 +1,21 @@
 .footer {
-  letter-spacing: 2px;
-  font-size: 0.6em;
-  width: 400px;
-  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // letter-spacing: 2px;
+  font-size: 0.8em;
 
-  min-height: 20px;
-  height: 50vh;
-  width: 100vw;
+  min-height: 10vh;
 
-  border: 2px solid red;
-  position: absolute;
-  bottom: 0;
+  // width: 100vw;
 
-  left: 55%;
-  transform: translateX(-50%);
+  // position: absolute;
+  // bottom: 0;
+
+  // left: 55%;
+  // transform: translateX(-50%);
   padding: 20px;
-  .overlapper {
-    background: #2a2b35;
+  a {
+    text-decoration: none;
   }
 }
