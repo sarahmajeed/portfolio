@@ -8,6 +8,7 @@ module.exports = {
   siteMetadata: {
     title: "Sarah Majeed",
     author: "Sarah Majeed",
+    url: "https://sarahmajeed.me/",
     image: "/src/images/image.jpg",
     description: "Web Developer",
     twitterUsername: "sarahh_dev",
