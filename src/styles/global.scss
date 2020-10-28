@@ -231,7 +231,7 @@
     margin-bottom: 200px;
     .img-wrapper {
       position: relative;
-      margin-bottom: 30px;
+
       height: 200px;
       width: 320px;
       transition: all 0.5s ease-out;
@@ -250,22 +250,21 @@
       }
       .plain {
         display: none;
-        // position: absolute;
-        // top: -5%;
-        // height: 200px;
-        // width: 400px;
-        // border: 4px solid white;
-        // animation: imageanimation 0.5s 1;
       }
       .img {
-        height: 200px;
-        width: 260px;
-        margin-left: 30px;
+        height: auto;
+        width: auto;
+        max-width: 100%;
+        max-height: 90%;
+
         filter: grayscale(100%);
       }
     }
     .text {
-      width: 260px;
+      height: auto;
+      width: auto;
+      max-width: 80%;
+      max-height: 90%;
 
       //margin: 10px 0px;
       padding: 20px;
@@ -367,8 +366,79 @@
 }
 
 //---------Responsiveness ------
+@media only screen and (min-width: 1111px) {
+  #work {
+    height: 100%;
+    width: 100%;
+    a {
+      text-decoration: none;
+    }
+    .project-wrapper {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 50px;
+      margin-bottom: 200px;
+      .img-wrapper {
+        position: relative;
+        margin: 10px 20px;
+        height: 400px;
+        width: 500px;
+        transition: all 0.5s ease-out;
+
+        &:hover {
+          cursor: pointer;
+          .plain {
+            top: -4%;
+            left: 2%;
+            border: 4px solid #81003d;
+          }
+          .img {
+            filter: grayscale(0);
+            border: 4px solid white;
+          }
+        }
+        .plain {
+          display: block;
+          position: absolute;
+          top: -5%;
+          height: 200px;
+          width: 400px;
+          border: 4px solid white;
+          animation: imageanimation 0.5s 1;
+        }
+        .img {
+          margin-left: 30px;
+          filter: grayscale(100%);
+        }
+      }
+      .text {
+        padding: 50px;
+        width: 700px;
+        background-color: rgba(129, 0, 61, 0.5);
+
+        p {
+          color: white;
+          margin-bottom: 10px;
+          opacity: 1;
+        }
+        .header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-size: 1.5em;
+
+          .git {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
 @media only screen and (min-width: 768px) {
   .main {
+    border: 1px solid red;
   }
   #hero {
     height: calc(100vh - 25vh);
@@ -417,76 +487,7 @@
       }
     }
   }
-  #work {
-    height: 100%;
-    width: 100%;
-    a {
-      text-decoration: none;
-    }
-    .project-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      align-items: center;
-      gap: 50px;
-      margin-bottom: 200px;
-      .img-wrapper {
-        position: relative;
-        margin: 10px 20px;
-        height: 400px;
-        width: 500px;
-        transition: all 0.5s ease-out;
 
-        &:hover {
-          cursor: pointer;
-          .plain {
-            top: -4%;
-            left: 2%;
-            border: 4px solid #81003d;
-          }
-          .img {
-            filter: grayscale(0);
-            border: 4px solid white;
-          }
-        }
-        .plain {
-          display: block;
-          position: absolute;
-          top: -5%;
-          height: 200px;
-          width: 400px;
-          border: 4px solid white;
-          animation: imageanimation 0.5s 1;
-        }
-        .img {
-          height: 200px;
-          width: 400px;
-          margin-left: 30px;
-          filter: grayscale(100%);
-        }
-      }
-      .text {
-        padding: 50px;
-        width: 600px;
-        background-color: rgba(129, 0, 61, 0.5);
-
-        p {
-          color: white;
-          margin-bottom: 10px;
-          opacity: 1;
-        }
-        .header {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          font-size: 1.5em;
-
-          .git {
-            margin-right: 10px;
-          }
-        }
-      }
-    }
-  }
   #about {
     font-family: "Poppins", sans-serif;
     height: 100vh;
@@ -569,6 +570,8 @@
     }
   }
   #skills {
+    height: 100vh;
+
     .grid-wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
