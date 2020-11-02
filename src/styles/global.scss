@@ -47,8 +47,12 @@
 
   .github,
   .twitter,
-  .linkedin {
+  .linkedin,
+  .medium {
     margin-right: 20px;
+    &:hover {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
   }
 }
 
@@ -340,8 +344,16 @@
           // margin-top: 30px;
 
           .google,
-          .linkedin {
+          .linkedin,
+          .twitter {
             margin-right: 10px;
+            background: transparent;
+            &:hover {
+              cursor: pointer;
+              background: transparent;
+              box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+              width: 40px;
+            }
           }
         }
       }

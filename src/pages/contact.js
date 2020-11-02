@@ -5,8 +5,20 @@ import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import Head from "../components/head"
 import { FaLinkedin, FaGoogle, FaTwitter } from "react-icons/fa"
+import { useStaticQuery, graphql } from "gatsby"
 
 function Contact() {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          twitterUsername
+          githubUsername
+          linkedinUsername
+        }
+      }
+    }
+  `)
   return (
     <div id="contact" className="main">
       <Head title="Contact" />

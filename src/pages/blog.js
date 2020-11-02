@@ -7,7 +7,7 @@ import Fade from "react-reveal/Fade"
 function Blog() {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
         edges {
           node {
             frontmatter {
@@ -36,7 +36,20 @@ function Blog() {
                     <p className="excerpt">
                       <i>{edge.node.excerpt}</i>
                     </p>
-                    <button className="btn">Read More ></button>
+                    <a
+                      target="_blank"
+                      href={
+                        edge.node.frontmatter.title ===
+                        "Things you need to know about LinkedIn if you’re new"
+                          ? "https://sarahmajeed.medium.com/things-you-need-to-know-about-linkedin-if-youre-new-8869f230d16c"
+                          : edge.node.frontmatter.title ===
+                            "Object Destructuring in ES6"
+                          ? "https://sarahmajeed.medium.com/object-destructuring-in-es6-e3165ee374a9"
+                          : "https://sarahmajeed.medium.com/array-destructuring-in-es6-ee80c0f516fa"
+                      }
+                    >
+                      <button className="btn">Read More ></button>
+                    </a>
                   </div>
                 </Fade>
               </div>
