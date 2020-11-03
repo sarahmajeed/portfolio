@@ -10,7 +10,7 @@ module.exports = {
     author: "Sarah Majeed",
     url: "https://sarahmajeed.me/",
     image: "/src/images/image.jpg",
-    description: "Web Developer",
+    description: "Full Stack Web Developer",
     twitterUsername: "sarahh_dev",
     githubUsername: "Sarahmdawood",
     linkedinUsername: "sarahmajeed",

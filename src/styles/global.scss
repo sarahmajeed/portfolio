@@ -52,6 +52,7 @@
     margin-right: 20px;
     &:hover {
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+      transform: translateY(-10%);
     }
   }
 }
@@ -350,6 +351,7 @@
             background: transparent;
             &:hover {
               cursor: pointer;
+              color: #006fab;
               background: transparent;
               box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
               width: 40px;

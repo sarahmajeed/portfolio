@@ -34,26 +34,22 @@ function About() {
               className="head"
             >
               About Me
-              <div
-                data-sal="slide-left"
-                data-sal-delay="200"
-                className="span"
-              ></div>
+              <div className="span"></div>
             </p>
 
-            <p data-sal="slide-left" data-sal-delay="300">
+            <p>
               Hello! I am Sarah Majeed, an undergraduate software engineer based
               in Karachi, Pakistan.{" "}
             </p>
 
-            <p data-sal="slide-left" data-sal-delay="400">
+            <p>
               I love making websites that have the potential to not just attract
               visitors but also give them an easy time by applying the best set
               of functionalities. I prefer my code to be clean and performant
               and my UI to be as sleek as possible.{" "}
             </p>
 
-            <p data-sal="slide-left" data-sal-delay="500">
+            <p>
               I have worked both on the frontend and the backend side and im
               continuing to grow in these areas with time , practice, experience
               and learning.
@@ -62,24 +58,20 @@ function About() {
         </Slide>
         <Slide right delay={100}>
           <div id="education">
-            <p data-sal="slide-left" data-sal-delay="200" className="head">
+            <p className="head">
               Education
-              <div
-                data-sal="slide-left"
-                data-sal-delay="200"
-                className="span"
-              ></div>
+              <div className="span"></div>
             </p>
             <ul>
-              <li data-sal="slide-left" data-sal-delay="300">
+              <li>
                 NED University Of Engineering and Technology{" "}
                 <p>Bachelors in Software Engineering</p>
               </li>
-              <li data-sal="slide-left" data-sal-delay="400">
+              <li>
                 BAMM Pechs College For Women
                 <p>Intermediate- Pre-Engineering</p>
               </li>
-              <li data-sal="slide-left" data-sal-delay="500">
+              <li>
                 The Mama Parsi Girls' Secondary School
                 <p>Matriculation - Biology</p>
               </li>
@@ -88,43 +80,33 @@ function About() {
         </Slide>
         <Slide right delay={100}>
           <div id="blog-writing">
-            <p data-sal="slide-left" data-sal-delay="200" className="head">
+            <p className="head">
               Blog Writing
-              <div
-                data-sal="slide-left"
-                data-sal-delay="200"
-                className="span"
-              ></div>
+              <div className="span"></div>
             </p>
-            <p data-sal="slide-left" data-sal-delay="300">
+            <p>
               Being a passionate learner, I also practice being a passionate
               mentor. Practicing mentorship through blogs helps me learn much
               myslef and hence I love it
             </p>
-            <p data-sal="slide-left" data-sal-delay="300">
+            <p>
               You can view all the blogs <Link to="/blog">Here</Link>
             </p>
           </div>
         </Slide>
         <Slide right delay={100}>
           <div id="community-work">
-            <p data-sal="slide-left" data-sal-delay="200" className="head">
+            <p className="head">
               Community Building
-              <div
-                data-sal="slide-left"
-                data-sal-delay="200"
-                className="span"
-              ></div>
+              <div className="span"></div>
             </p>
-            <p data-sal="slide-left" data-sal-delay="300">
+            <p>
               I like building communities and making an impact by forming core
               leadership skills.{" "}
             </p>
-            <p data-sal="slide-left" data-sal-delay="300">
-              Some of my community related work is mentioned below:
-            </p>
+            <p>Some of my community related work is mentioned below:</p>
             <ul>
-              <li data-sal="slide-left" data-sal-delay="400">
+              <li>
                 Microsoft Learn Student Ambassador ,Karachi - Technical Lead{" "}
                 <p>
                   Being an MLSA, I work as a technical lead at my city
@@ -132,18 +114,16 @@ function About() {
                   passion of bringing a change.
                 </p>
               </li>
-              <li data-sal="slide-left" data-sal-delay="500">
+              <li>
                 Developer Student Clubs, NEDUET - Marketing Lead <p></p>
               </li>
-              <li data-sal="slide-left" data-sal-delay="600">
-                ACM, NEDUET - Manager Corporate Relations
-              </li>
+              <li>ACM, NEDUET - Manager Corporate Relations</li>
             </ul>
           </div>
         </Slide>
         <Slide right delay={100}>
           <div id="other-interests">
-            <p data-sal="slide-left" data-sal-delay="200" className="head">
+            <p className="head">
               Other Interests
               <div
                 data-sal="slide-left"
@@ -151,7 +131,7 @@ function About() {
                 className="span"
               ></div>
             </p>
-            <p data-sal="slide-left" data-sal-delay="300" className="last-para">
+            <p className="last-para">
               Apart from coding, which takes up major chunk of my day, I
               absolutely love reading books and writing random excerpts. I also
               enjoy my time outdoors be it a long drive or a park visit!{" "}

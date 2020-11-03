@@ -30,9 +30,11 @@ function Hero() {
 
         <Fade>
           <p className="desc">
-            I am a passionate {data.site.siteMetadata.description} who loves
-            building good products for the web. I belive in making good
-            eye-catching designs and highly effecient and fast websites.
+            I am a {data.site.siteMetadata.description}. My love for solving
+            real world problems through visually attractive and highly
+            functional websites, having an educational background in software
+            engineering and strong technical skills make me stand out in my
+            field of interest.
           </p>
         </Fade>
       </div>

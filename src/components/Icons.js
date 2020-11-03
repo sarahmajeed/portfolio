@@ -30,7 +30,7 @@ function Icons() {
         href={`https://github.com/${data.site.siteMetadata.githubUsername}`}
         className="github"
       >
-        <FaGithub size={22} />
+        <FaGithub size={32} />
       </a>
 
       <a
@@ -39,7 +39,7 @@ function Icons() {
         href={`https://twitter.com/${data.site.siteMetadata.twitterUsername}`}
         className="twitter"
       >
-        <FaTwitter size={22} />
+        <FaTwitter size={32} />
       </a>
 
       <a
@@ -48,7 +48,7 @@ function Icons() {
         href={`https://linkedin.com/in/${data.site.siteMetadata.linkedinUsername}`}
         className="linkedin"
       >
-        <FaLinkedin size={22} />
+        <FaLinkedin size={32} />
       </a>
       <a
         rel="noopener noreferrer"
@@ -56,7 +56,7 @@ function Icons() {
         href="https://medium.com/@sarahmajeed"
         className="medium"
       >
-        <FaMediumM size={22} />
+        <FaMediumM size={32} />
       </a>
     </div>
   )
