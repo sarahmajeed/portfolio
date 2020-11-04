@@ -2,6 +2,16 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Slide from "react-reveal/Slide"
 import Fade from "react-reveal/Fade"
+import reactjs from "../components/images/react.jpg"
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaDatabase,
+  FaNode,
+  FaSass,
+} from "react-icons/fa"
 
 function Hero() {
   const data = useStaticQuery(graphql`
@@ -23,24 +33,27 @@ function Hero() {
   `)
   return (
     <div id="hero">
-      <div className="section">
-        <Slide top>
-          <h1> Hi,</h1>
-          <div className="name">
-            <div className="head">
-              {" "}
-              <h1>I'm </h1>
+      <div className="flex-wrapper">
+        <div className="section">
+          <Slide top>
+            <h1> Hi,</h1>
+            <div className="name">
+              <div className="head">
+                {" "}
+                <h1>I'm </h1>
+              </div>
+              <div className="part">
+                <h1> {data.site.siteMetadata.author},</h1>
+              </div>
             </div>
-            <div className="part">
-              <h1> {data.site.siteMetadata.author},</h1>
-            </div>
-          </div>
 
-          <h1 className="profession">{data.site.siteMetadata.description}.</h1>
-          <p>CSS / JavaScript / React / Node</p>
-        </Slide>
+            <h1 className="profession">
+              {data.site.siteMetadata.description}.
+            </h1>
+            <p>CSS / JavaScript / React / Node</p>
+          </Slide>
 
-        {/* <Fade>
+          {/* <Fade>
           <p className="desc">
             I am a {data.site.siteMetadata.description}. My love for solving
             real world problems through visually attractive and highly
@@ -49,29 +62,40 @@ function Hero() {
             field of interest.
           </p>
         </Fade> */}
-      </div>
-      <Slide bottom>
-        <div className="button">
-          {data.allFile.edges.map(file => {
-            return (
-              <a download href={file.node.publicURL}>
-                <div
-                  // data-sal="slide-up"
-                  // data-sal-delay="500"
-                  // data-sal-easing="ease"
-                  className="btn"
-                >
-                  Download Resume.
-                </div>
-              </a>
-            )
-          })}
-
-          <a href="mailto:sarahmajeed368@gmail.com">
-            <div className="btn">Get in touch.</div>
-          </a>
         </div>
-      </Slide>
+        <Slide bottom>
+          <div className="button">
+            {data.allFile.edges.map(file => {
+              return (
+                <a download href={file.node.publicURL}>
+                  <div
+                    // data-sal="slide-up"
+                    // data-sal-delay="500"
+                    // data-sal-easing="ease"
+                    className="btn"
+                  >
+                    Download Resume.
+                  </div>
+                </a>
+              )
+            })}
+
+            <a href="mailto:sarahmajeed368@gmail.com">
+              <div className="btn">Get in touch.</div>
+            </a>
+          </div>
+        </Slide>
+      </div>
+      <div className="grid">
+        <FaReact className="react" size={70} />
+
+        <FaCss3 className=" css" size={70} />
+        <FaJs className=" js" size={70} />
+        <FaNode className=" node" size={70} />
+        <FaDatabase className=" db" size={70} />
+        <FaSass className=" sass" size={70} />
+        <FaHtml5 className="html" size={70} />
+      </div>
     </div>
   )
 }

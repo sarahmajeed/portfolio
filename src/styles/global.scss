@@ -116,6 +116,9 @@
       }
     }
   }
+  .grid {
+    display: none;
+  }
 }
 
 //-------Styling about page---------
@@ -205,7 +208,7 @@
 
       margin-bottom: 80px;
       padding: 20px;
-      background-color: rgba(129, 0, 61, 0.5);
+      background-color: rgba(129, 0, 61, 10.5);
       .head {
         margin-bottom: 10px;
       }
@@ -468,48 +471,152 @@
 }
 @media only screen and (min-width: 768px) {
   #hero {
+    position: relative;
     height: calc(100vh - 25vh);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    display: grid;
+    grid-template-areas: "section grid";
+    grid-template-columns: 1fr 3fr;
+    gap: 120px;
+    align-items: center;
     margin-left: 5%;
 
-    .section {
-      width: 60px;
-      min-width: 100%;
-      .name {
+    .flex-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      .section {
+        width: 60px;
+        min-width: 100%;
+        .name {
+          letter-spacing: 2px;
+          margin-bottom: 10px;
+          font-size: 2vw;
+        }
+      }
+      .desc {
         letter-spacing: 2px;
-        margin-bottom: 10px;
-        font-size: 2vw;
+        width: 700px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+      .button {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+
+        .btn {
+          padding: 20px;
+
+          background: #81003d;
+          margin-right: 10px;
+          width: 250px;
+          text-align: center;
+          transition: all 0.2s;
+          &:hover {
+            cursor: pointer;
+            background-color: transparent;
+            border: 1px solid white;
+            transform: translateY(-4%);
+          }
+        }
       }
     }
-    .desc {
-      letter-spacing: 2px;
-      width: 700px;
-    }
+    .grid {
+      display: block;
+      height: 400px;
+      width: 500px;
 
-    a {
-      text-decoration: none;
-    }
-    .button {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: row;
+      position: relative;
 
-      .btn {
-        padding: 20px;
+      .react {
+        position: absolute;
 
-        background: #81003d;
-        margin-right: 10px;
-        width: 250px;
-        text-align: center;
-        transition: all 0.2s;
+        top: 70%;
+        right: 70%;
+        transition: all 1s ease-out;
+        & > * {
+          fill: rgba(20, 30, 48, 1);
+        }
         &:hover {
-          cursor: pointer;
-          background-color: transparent;
-          border: 1px solid white;
-          transform: translateY(-4%);
+          transform: translateX(20px) translateY(30px);
+        }
+      }
+      .css {
+        position: absolute;
+
+        top: 25%;
+        right: 35%;
+        transition: all 1s ease-out;
+        & > * {
+          fill: rgba(20, 30, 48, 0.8);
+        }
+        &:hover {
+          transform: translateX(20px) translateY(-30px);
+        }
+      }
+      .js {
+        position: absolute;
+        top: 20%;
+        right: 0;
+        transition: all 1s ease-out;
+        & > * {
+          fill: rgba(20, 30, 48, 0.8);
+        }
+        &:hover {
+          transform: translateX(20px) translateY(30px);
+        }
+      }
+      .db {
+        position: absolute;
+        top: 65%;
+        right: 0;
+        transition: all 1s ease-out;
+        & > * {
+          fill: rgba(20, 30, 48, 0.8);
+        }
+        &:hover {
+          transform: translateX(20px) translateY(30px);
+        }
+      }
+      .node {
+        position: absolute;
+        top: 80%;
+        right: 30%;
+        transition: all 1s ease-out;
+        & > * {
+          fill: rgba(20, 30, 48, 1);
+        }
+        &:hover {
+          transform: translateX(20px) translateY(30px);
+        }
+      }
+      .sass {
+        position: absolute;
+        top: 40%;
+        right: 90%;
+        transition: all 1s ease-out;
+        & > * {
+          fill: rgba(20, 30, 48, 1);
+        }
+        &:hover {
+          transform: translateX(-20px) translateY(30px);
+        }
+      }
+
+      .html {
+        top: -5%;
+        right: 70%;
+        position: absolute;
+        transition: all 1s ease-out;
+        opacity: 0.9;
+        & > * {
+          fill: rgba(20, 30, 48, 0.8);
+        }
+        &:hover {
+          transform: translateX(20px) translateY(-30px);
         }
       }
     }
