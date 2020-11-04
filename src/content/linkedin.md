@@ -1,5 +1,5 @@
 ---
- title: "Things you need to know about LinkedIn if you’re new"
+ title: "The do's and dont's of LinkedIn"
  date: "02-11-2020"
 ---
 

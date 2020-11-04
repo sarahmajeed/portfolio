@@ -25,10 +25,22 @@ function Hero() {
     <div id="hero">
       <div className="section">
         <Slide top>
-          <h1 className="name"> Hi, I'm {data.site.siteMetadata.author}</h1>
+          <h1> Hi,</h1>
+          <div className="name">
+            <div className="head">
+              {" "}
+              <h1>I'm </h1>
+            </div>
+            <div className="part">
+              <h1> {data.site.siteMetadata.author},</h1>
+            </div>
+          </div>
+
+          <h1 className="profession">{data.site.siteMetadata.description}.</h1>
+          <p>CSS / JavaScript / React / Node</p>
         </Slide>
 
-        <Fade>
+        {/* <Fade>
           <p className="desc">
             I am a {data.site.siteMetadata.description}. My love for solving
             real world problems through visually attractive and highly
@@ -36,7 +48,7 @@ function Hero() {
             engineering and strong technical skills make me stand out in my
             field of interest.
           </p>
-        </Fade>
+        </Fade> */}
       </div>
       <Slide bottom>
         <div className="button">

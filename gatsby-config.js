@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: "Sarah Majeed",
-    author: "Sarah Majeed",
+    author: "Sarah",
     url: "https://sarahmajeed.me/",
     image: "/src/images/image.jpg",
     description: "Full Stack Web Developer",

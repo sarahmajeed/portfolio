@@ -16,13 +16,13 @@ function Work() {
           <h1 className="title">My projects</h1>
         </Slide>
 
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="http://elegant-clothing.web.app/"
-        >
-          <div className="project-wrapper">
-            <Slide left>
+        <div className="project-wrapper">
+          <Slide left>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="http://elegant-clothing.web.app/"
+            >
               <div className="img-wrapper">
                 <div className="plain"></div>
                 <img
@@ -31,34 +31,35 @@ function Work() {
                   alt="elegant clothing"
                 />
               </div>
-            </Slide>
-            <Slide right>
-              <div className="text">
-                <p className="header">
-                  Elegant Clothing - Version 1.0
-                  <div className="icns">
-                    <a
-                      className="git"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      href="https://github.com/Sarahmdawood/clothing-app"
-                    >
-                      <FaGithub />
-                    </a>
-                    <a
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      href="http://elegant-clothing.web.app/"
-                    >
-                      <FaLink />
-                    </a>
-                  </div>
-                </p>
-                <p>
-                  A PERN Stack e-commerce application that helps people shop
-                  online
-                </p>
-                {/* <p>Key Features:</p>
+            </a>
+          </Slide>
+          <Slide right>
+            <div className="text">
+              <p className="header">
+                Elegant Clothing - Version 1.0
+                <div className="icns">
+                  <a
+                    className="git"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="https://github.com/Sarahmdawood/clothing-app"
+                  >
+                    <FaGithub />
+                  </a>
+                  <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="http://elegant-clothing.web.app/"
+                  >
+                    <FaLink />
+                  </a>
+                </div>
+              </p>
+              <p>
+                A PERN Stack e-commerce application that helps people shop
+                online
+              </p>
+              {/* <p>Key Features:</p>
 
               <p>
                 <FaArrowRight /> Display of entire collection with prices
@@ -73,10 +74,9 @@ function Work() {
               <p>
                 <FaArrowRight /> Download receipt after payment
               </p> */}
-              </div>
-            </Slide>
-          </div>
-        </a>
+            </div>
+          </Slide>
+        </div>
 
         <a
           rel="noopener noreferrer"
