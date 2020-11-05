@@ -1,7 +1,6 @@
 .nav {
   display: flex;
   flex-direction: column;
-  font-size: 1rem;
 
   .links {
     display: flex;
@@ -16,7 +15,7 @@
   .home,
   .about {
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 3vw;
     margin: 2px;
     padding: 1px;
     &:hover {
@@ -53,6 +52,7 @@
       .blog,
       .home {
         text-decoration: none;
+        font-size: 2vw;
         color: white;
 
         margin-right: 10px;
