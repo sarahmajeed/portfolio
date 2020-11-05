@@ -124,68 +124,14 @@
 //-------Styling about page---------
 #about {
   font-family: "Poppins", sans-serif;
-  height: 100%;
-
-  .tags {
-    display: none;
-  }
-  .span {
-    display: block;
-    height: 1px;
-    width: 200px;
-    background-color: white;
-  }
-  #about-me {
-    height: 100vh;
-    p {
-      margin-bottom: 10px;
-    }
-    .head {
-      margin: 30px 0;
-      font-size: 2em;
-    }
-  }
-  #education,
-  #blog-writing,
-  #community-work,
-  #other-interests {
-    height: 100vh;
-    p {
-      margin-bottom: 10px;
-    }
-    .head {
-      // margin: 0px 0;
-      font-size: 2em;
-    }
-  }
-  #blog-writing {
-    .span {
-      width: 220px;
-    }
-  }
-  #community-work {
-    .span {
-      width: 370px;
-    }
-  }
-  #other-interests {
-    .span {
-      width: 350px;
-    }
-  }
-
-  #about-me,
-  #education,
-  #blog-writing,
-  #community-work,
-  #other-interests {
-    margin: 20px;
-
-    width: 500px;
-  }
-
-  .last-para {
-    margin-bottom: 100px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  .outer-box {
+    max-height: 100%;
+    max-width: 100%;
+    padding: 30px;
+    margin: 10px auto;
   }
 }
 
@@ -208,7 +154,7 @@
 
       margin-bottom: 80px;
       padding: 20px;
-      background-color: rgba(129, 0, 61, 10.5);
+      background-color: rgba(129, 0, 61, 0.5);
       .head {
         margin-bottom: 10px;
       }
@@ -485,9 +431,11 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+
       .section {
         width: 60px;
         min-width: 100%;
+
         .name {
           letter-spacing: 2px;
           margin-bottom: 10px;
@@ -526,16 +474,16 @@
     }
     .grid {
       display: block;
-      height: 400px;
-      width: 500px;
+
+      // max-width: 100%;
+      width: 3fr;
+      // max-height: 100%;
 
       position: relative;
 
       .react {
         position: absolute;
-
-        top: 70%;
-        right: 70%;
+        right: 0;
         transition: all 1s ease-out;
         & > * {
           fill: rgba(20, 30, 48, 1);
@@ -547,8 +495,8 @@
       .css {
         position: absolute;
 
-        top: 25%;
-        right: 35%;
+        right: 30%;
+        top: -100%;
         transition: all 1s ease-out;
         & > * {
           fill: rgba(20, 30, 48, 0.8);
@@ -559,8 +507,8 @@
       }
       .js {
         position: absolute;
-        top: 20%;
-        right: 0;
+        top: 160%;
+        right: 10%;
         transition: all 1s ease-out;
         & > * {
           fill: rgba(20, 30, 48, 0.8);
@@ -571,8 +519,8 @@
       }
       .db {
         position: absolute;
-        top: 65%;
-        right: 0;
+        top: -150%;
+        right: 80%;
         transition: all 1s ease-out;
         & > * {
           fill: rgba(20, 30, 48, 0.8);
@@ -583,8 +531,8 @@
       }
       .node {
         position: absolute;
-        top: 80%;
-        right: 30%;
+        top: 60;
+        right: 50%;
         transition: all 1s ease-out;
         & > * {
           fill: rgba(20, 30, 48, 1);
@@ -595,8 +543,8 @@
       }
       .sass {
         position: absolute;
-        top: 40%;
-        right: 90%;
+        top: 70%;
+        right: 100%;
         transition: all 1s ease-out;
         & > * {
           fill: rgba(20, 30, 48, 1);
@@ -607,9 +555,7 @@
       }
 
       .html {
-        top: -5%;
-        right: 70%;
-        position: absolute;
+        transform: translateX(200px) translateY(200px);
         transition: all 1s ease-out;
         opacity: 0.9;
         & > * {
@@ -625,82 +571,8 @@
   #about {
     font-family: "Poppins", sans-serif;
     height: 100vh;
-
-    .tags {
-      display: block;
-      margin-bottom: 200px;
-      position: fixed;
-      top: 30%;
-      text-decoration: none;
-
-      .about-tag {
-        //background: darkorange;
-        .aboutt {
-          text-decoration: none;
-        }
-      }
-      .education-tag {
-        //background: darkmagenta;
-        width: 100px;
-        padding: 5px;
-        border-radius: 0 8px 8px 0;
-      }
-      // .blog-tag {
-      //   background: darkolivegreen;
-      // }
-      // .community-tag {
-      //   background-color: darkred;
-      // }
-      // .interest-tag {
-      //   background: darkslategrey;
-      // }
-
-      .about-tag,
-      .community-tag,
-      .interest-tag,
-      .education-tag,
-      .blog-tag {
-        width: 150px;
-        padding: 5px;
-        border-radius: 0 8px 8px 0;
-        border: 1px solid #666;
-        margin-bottom: 20px;
-        text-decoration: none;
-        background: #81003d;
-
-        &:hover {
-          background: transparent;
-          cursor: pointer;
-        }
-      }
-    }
-
-    #education,
-    #blog-writing,
-    #community-work,
-    #other-interests {
-      margin: 10px;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-
-      justify-content: center;
-      width: 500px;
-      margin-left: 500px;
-      li {
-        opacity: 0.7;
-      }
-    }
-    #about-me {
-      margin: 10px;
-      height: 100vh;
-      width: 500px;
-      margin-left: 500px;
-    }
-    .last-para {
-      margin-bottom: 100px;
-    }
   }
+
   #skills {
     height: 100vh;
 

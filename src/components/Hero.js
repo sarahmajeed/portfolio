@@ -52,16 +52,6 @@ function Hero() {
             </h1>
             <p>CSS / JavaScript / React / Node</p>
           </Slide>
-
-          {/* <Fade>
-          <p className="desc">
-            I am a {data.site.siteMetadata.description}. My love for solving
-            real world problems through visually attractive and highly
-            functional websites, having an educational background in software
-            engineering and strong technical skills make me stand out in my
-            field of interest.
-          </p>
-        </Fade> */}
         </div>
         <Slide bottom>
           <div className="button">
@@ -87,14 +77,14 @@ function Hero() {
         </Slide>
       </div>
       <div className="grid">
-        <FaReact className="react" size={70} />
+        <FaReact className="react" size={100} />
 
-        <FaCss3 className=" css" size={70} />
-        <FaJs className=" js" size={70} />
-        <FaNode className=" node" size={70} />
-        <FaDatabase className=" db" size={70} />
-        <FaSass className=" sass" size={70} />
-        <FaHtml5 className="html" size={70} />
+        <FaCss3 className=" css" size={100} />
+        <FaJs className=" js" size={100} />
+        <FaNode className=" node" size={100} />
+        <FaDatabase className=" db" size={100} />
+        <FaSass className=" sass" size={100} />
+        <FaHtml5 className="html" size={100} />
       </div>
     </div>
   )
