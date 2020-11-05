@@ -6,7 +6,7 @@ import reactjs from "../components/images/react.jpg"
 import {
   FaReact,
   FaHtml5,
-  FaCss3,
+  FaCss3Alt,
   FaJs,
   FaDatabase,
   FaNode,
@@ -34,6 +34,14 @@ function Hero() {
   return (
     <div id="hero">
       <div className="flex-wrapper">
+        <FaReact className="react" size={70} />
+
+        <FaCss3Alt className=" css" size={70} />
+        <FaJs className=" js" size={70} />
+        <FaNode className=" node" size={70} />
+        <FaDatabase className=" db" size={70} />
+        <FaSass className=" sass" size={70} />
+        <FaHtml5 className="html" size={70} />
         <div className="section">
           <Slide top>
             <h1> Hi,</h1>
@@ -76,16 +84,9 @@ function Hero() {
           </div>
         </Slide>
       </div>
-      <div className="grid">
-        <FaReact className="react" size={100} />
-
-        <FaCss3 className=" css" size={100} />
-        <FaJs className=" js" size={100} />
-        <FaNode className=" node" size={100} />
-        <FaDatabase className=" db" size={100} />
-        <FaSass className=" sass" size={100} />
-        <FaHtml5 className="html" size={100} />
-      </div>
+      {/* <div className="grid">
+        
+      </div> */}
     </div>
   )
 }
