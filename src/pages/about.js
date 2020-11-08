@@ -48,20 +48,32 @@ function About() {
               <div className="frontend">
                 <p>FRONT END</p>
                 <span></span>
-                JavaScript, React, CSS/ SCSS, HTML5, Responsive Layout / Flex /
-                Grid
+                <ul>
+                  <li> JavaScript</li>
+                  <li>React</li>
+                  <li>CSS/ SCSS</li>
+                  <li>Bootstrap</li>
+                  <li>Responsive Layout / Flex / Grid</li>
+                  <li>HTML5</li>
+                </ul>
               </div>
               <div className="backend">
                 <p>BACK END</p>
                 <span></span>
-                Node / Express, REST API, SQL (PostgreSQL),
+                <ul>
+                  <li> Node / Express</li>
+                  <li>REST API</li>
+                  <li>SQL (PostgreSQL)</li>
+                </ul>
               </div>
               <div className="tools">
                 <p>TOOLS</p>
                 <span></span>
-                Git/ Github, Web Hosting - Firebase, Heroku, AWS, Azure,
-                Communication Tools - Slack, Trello, Web scaling - Lighthouse,
-                Lambda Test,
+                <ul>
+                  <li> Git/ Github</li>
+                  <li>Web Hosting - Firebase, Heroku, AWS, Azure</li>
+                  <li>Communication Tools - Slack, Trello</li>
+                </ul>
               </div>
             </p>
             <a href="#third">
@@ -77,11 +89,10 @@ function About() {
           <div className="content">
             <h1>Building Impact</h1>
             <p className="impact">
-              <h3>Helping Community grow!</h3>I am active community builder with
-              the solid aim of building impact through my work. I am part of
-              communities like DSC, MLSA and ACM. I help fellow tech enthusiasts
-              through blogs, contributing to open source and hosting meaningful
-              events.
+              I am active community builder with the solid aim of building
+              impact through my work. I am part of communities like DSC, MLSA
+              and ACM. I help fellow tech enthusiasts through blogs,
+              contributing to open source and hosting meaningful events.
             </p>
           </div>
         </section>

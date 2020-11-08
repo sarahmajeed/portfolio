@@ -622,7 +622,6 @@
 
   #about {
     font-family: "Poppins", sans-serif;
-    height: 100vh;
 
     #first,
     #second,
@@ -634,9 +633,7 @@
       align-items: center;
       justify-content: center;
       width: 100vw;
-      h1 {
-        margin-bottom: 20px;
-      }
+
       .content {
         display: flex;
         flex-direction: column;
@@ -644,6 +641,22 @@
         justify-content: center;
         width: 60vw;
         padding: 100px;
+        .skills {
+          width: 80vw;
+          display: grid;
+          grid-template-columns: 2fr 2fr 2fr;
+          span {
+            height: 1px;
+            display: block;
+            width: 100px;
+            background-color: white;
+            margin-bottom: 20px;
+          }
+        }
+        h1 {
+          margin-bottom: 30px;
+        }
+
         .desc {
           line-height: 40px;
         }
@@ -674,15 +687,6 @@
     }
     #first {
       height: calc(100vh - 25vh);
-    }
-
-    #skills {
-      height: 100vh;
-
-      .grid-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-      }
     }
   }
   @media only screen and (max-width: 414px) {
