@@ -5,6 +5,9 @@ import Head from "../components/head"
 import { Link } from "gatsby"
 import Slide from "react-reveal/Slide"
 import { FaArrowRight } from "react-icons/fa"
+import mlsa from "../components/images/mlsa.png"
+import dsc from "../components/images/dsc.png"
+import acm from "../components/images/acm.jpg"
 
 function About() {
   const handleNext = () => {
@@ -24,12 +27,13 @@ function About() {
         <section id="first">
           <div className="content">
             <h1>About Me</h1>
+            <span></span>
             <p className="desc">
-              <h3>Hey there fellas!</h3>I am a Full Stack Web Developer. My love
-              for solving real world problems through visually attractive and
-              highly functional websites, having an educational background in
-              software engineering and strong technical skills make me stand out
-              in my field of interest.
+              <h3>Hey there!</h3>I am a Full Stack Web Developer. My love for
+              solving real world problems through visually attractive and highly
+              functional websites, having an educational background in software
+              engineering and strong technical skills make me stand out in my
+              field of interest.
             </p>
             <a href="#second">
               <button className="btn">
@@ -43,6 +47,7 @@ function About() {
         <section id="second">
           <div className="content">
             <h1>Skills</h1>
+            <span></span>
             <p className="skills">
               {/* <h3>My Skills</h3> */}
               <div className="frontend">
@@ -50,7 +55,7 @@ function About() {
                 <span></span>
                 <ul>
                   <li> JavaScript</li>
-                  <li>React</li>
+                  <li>ReactJs / GatsbyJs</li>
                   <li>CSS/ SCSS</li>
                   <li>Bootstrap</li>
                   <li>Responsive Layout / Flex / Grid</li>
@@ -88,12 +93,21 @@ function About() {
         <section id="third">
           <div className="content">
             <h1>Building Impact</h1>
+            <span className="impact-span"></span>
             <p className="impact">
               I am active community builder with the solid aim of building
-              impact through my work. I am part of communities like DSC, MLSA
-              and ACM. I help fellow tech enthusiasts through blogs,
-              contributing to open source and hosting meaningful events.
+              impact through my work. I am part of communities like{" "}
+              <b>Developer Student Clubs</b>,{" "}
+              <b>Microsoft Learn Student Ambassadors</b> and{" "}
+              <b>Association for Computing Machinery</b>. I help fellow tech
+              enthusiasts through blogs, contributing to open source and hosting
+              meaningful events.
             </p>
+            {/* <div className="imgs">
+              <img height="100px" width="100px" src={mlsa} alt="mlsa" />
+              <img height="100px" width="100px" src={dsc} alt="dsc" />
+              <img height="100px" width="100px" src={acm} alt="acm" />
+            </div> */}
           </div>
         </section>
       </Layout>

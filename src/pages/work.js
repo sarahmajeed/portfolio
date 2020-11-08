@@ -6,8 +6,23 @@ import weatherforecast from "../components/images/weatherforecast.jpeg"
 import { FaStar, FaGithub, FaArrowRight, FaLink } from "react-icons/fa"
 import Head from "../components/head"
 import Slide from "react-reveal/Slide"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 function Work() {
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     fileName: file(
+  //       relativePath: { eq: "../components/images/elegantcothing.jpeg" }
+  //     ) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 400, maxHeight: 250) {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
   return (
     <div id="work" className="main">
       <Layout>
@@ -30,6 +45,7 @@ function Work() {
                   src={elegantclothing}
                   alt="elegant clothing"
                 />
+                {/* <Img fluid={data.fileName.childImageSharp.fluid} alt="" /> */}
               </div>
             </a>
           </Slide>
