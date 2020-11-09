@@ -59,7 +59,7 @@ function Blog() {
                         target="_blank"
                         href={
                           edge.node.frontmatter.title ===
-                          "Things you need to know about LinkedIn if you’re new"
+                          "The do's and dont's of LinkedIn"
                             ? "https://sarahmajeed.medium.com/things-you-need-to-know-about-linkedin-if-youre-new-8869f230d16c"
                             : edge.node.frontmatter.title ===
                               "Object Destructuring in ES6"

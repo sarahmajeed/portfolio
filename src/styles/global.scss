@@ -661,6 +661,7 @@
     #third {
       font-size: 1.5vw;
       height: 100vh;
+
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -757,6 +758,7 @@
     #first {
       height: calc(100vh - 10vh);
     }
+
     #third {
       height: calc(100vh - 10vh);
       .up {
