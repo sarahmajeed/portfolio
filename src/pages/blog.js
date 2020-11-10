@@ -39,13 +39,15 @@ function Blog() {
               <div className="blog-wrapper">
                 <Fade left>
                   <div className="blog-card">
-                    <Img
-                      className="gatsbyimage"
-                      fluid={
-                        edge.node.frontmatter.featuredImage.childImageSharp
-                          .fluid
-                      }
-                    />
+                    <div className="image">
+                      <Img
+                        className="gatsbyimage"
+                        fluid={
+                          edge.node.frontmatter.featuredImage.childImageSharp
+                            .fluid
+                        }
+                      />
+                    </div>
                     <div className="overlay">
                       <h1 className="head">{edge.node.frontmatter.title}</h1>
                       <p className="date">
