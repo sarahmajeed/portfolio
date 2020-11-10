@@ -56,10 +56,10 @@ function Work() {
                 >
                   <div className="plain"></div>
 
-                  {/* <Img
+                  <Img
                     className="img"
                     fluid={data.elegantclothing.childImageSharp.fluid}
-                  /> */}
+                  />
                 </a>
               </div>
             </Slide>
