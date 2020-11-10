@@ -1,8 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import elegantclothing from "../components/images/elegantclothing.jpeg"
-import facedetection from "../components/images/facedetection.jpeg"
-import weatherforecast from "../components/images/weatherforecast.jpeg"
+
 import { FaStar, FaGithub, FaArrowRight, FaLink } from "react-icons/fa"
 import Head from "../components/head"
 import Slide from "react-reveal/Slide"
