@@ -19,6 +19,16 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `GatsbyJS`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+
+        icon: "src/components/images/icon.ico",
+      },
+    },
+    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [

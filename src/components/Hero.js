@@ -61,28 +61,20 @@ function Hero() {
             <p>CSS / JavaScript / React / Node</p>
           </Slide>
         </div>
-        <Slide bottom>
-          <div className="button">
-            {data.allFile.edges.map(file => {
-              return (
-                <a download href={file.node.publicURL}>
-                  <div
-                    // data-sal="slide-up"
-                    // data-sal-delay="500"
-                    // data-sal-easing="ease"
-                    className="btn"
-                  >
-                    Download Resume.
-                  </div>
-                </a>
-              )
-            })}
 
-            <a href="mailto:sarahmajeed368@gmail.com">
-              <div className="btn">Get in touch.</div>
-            </a>
-          </div>
-        </Slide>
+        <div className="button">
+          {data.allFile.edges.map(file => {
+            return (
+              <a download href={file.node.publicURL}>
+                <div className="btn">Download Resume.</div>
+              </a>
+            )
+          })}
+
+          <a href="mailto:sarahmajeed368@gmail.com">
+            <div className="btn">Get in touch.</div>
+          </a>
+        </div>
       </div>
       {/* <div className="grid">
         

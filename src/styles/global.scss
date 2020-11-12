@@ -60,6 +60,7 @@
 //-------Styling hero page---------
 #hero {
   height: calc(100vh - 25vh);
+  //height: calc(100% - 25vh);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,6 +79,7 @@
   .section {
     width: 60px;
     min-width: 100%;
+
     .name {
       display: flex;
       flex-direction: row;
@@ -107,12 +109,13 @@
   .button {
     margin-top: 30px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     .btn {
       position: relative;
       z-index: 1;
       background-color: transparent;
       border: 1px solid white;
+      margin-bottom: 10px;
       &::after {
         content: "";
         position: absolute;
@@ -159,13 +162,24 @@
   #first,
   #second,
   #third {
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    // justify-content: center;
+    align-items: flex-start;
+    justify-content: center;
     padding: 30px;
     width: 100vw;
+    span {
+      display: block;
+      height: 3px;
+      width: 50px;
+      background-color: white;
+      margin-bottom: 30px;
+    }
+    .impact-span {
+      width: 200px;
+      margin-top: 10px;
+    }
     .desc,
     .tools {
       margin-bottom: 10px;
@@ -173,20 +187,54 @@
     a {
       text-decoration: none;
       .btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: none;
+        // align-items: center;
+        // justify-content: center;
+        // justify-content: center;
+        // transition: all 1s ease-out;
+        // //margin-top: 100px;
+        // position: relative;
+        // z-index: 1;
+        // background-color: transparent;
+        // border: 1px solid white;
+
+        // &::after {
+        //   content: "";
+        //   position: absolute;
+        //   bottom: 0;
+        //   left: 0;
+        //   width: 100%;
+        //   height: 100%;
+        //   transform: scaleY(0);
+        //   transform-origin: top center;
+        //   background: #81003d;
+        //   z-index: -1;
+        //   transition: transform 0.4s;
+        // }
+        // &:hover::after {
+        //   transform: scaleY(1);
+        // }
         .arrow {
           margin-left: 10px;
+          transition: all 0.5s ease-out;
+        }
+        &:hover {
+          .arrow {
+            transform: rotateZ(90deg);
+          }
         }
       }
     }
     .skills {
+      p {
+        margin-top: 10px;
+      }
       span {
         display: block;
         background-color: white;
         height: 1px;
         width: 100px;
+        margin-bottom: 10px;
       }
       li {
         list-style: none;
@@ -194,7 +242,7 @@
     }
   }
   #third {
-    height: calc(100vh - 10vh);
+    // height: calc(100vh - 10vh);
     position: relative;
     .up {
       position: absolute;
@@ -274,7 +322,7 @@
 
 //-------Styling work page---------
 #work {
-  // height: 100%;
+  height: 100%;
   // width: 100%;
   a {
     text-decoration: none;
@@ -283,7 +331,6 @@
     display: flex;
 
     flex-direction: column;
-    align-items: center;
     align-items: center;
 
     margin-bottom: 200px;
@@ -296,13 +343,9 @@
 
       &:hover {
         cursor: pointer;
-        .plain {
-          top: -4%;
-          left: 2%;
-          border: 4px solid #81003d;
-        }
+
         .img {
-          filter: grayscale(0);
+          // filter: grayscale(0);
           border: 4px solid white;
         }
       }
@@ -314,8 +357,6 @@
         width: auto;
         max-width: 100%;
         max-height: 90%;
-
-        filter: grayscale(100%);
       }
     }
     .text {
@@ -437,6 +478,8 @@
 }
 
 //---------Responsiveness ------
+@media only screen and (min-width: 666px) {
+}
 @media only screen and (min-width: 1111px) {
   #work {
     height: 100%;
@@ -478,7 +521,6 @@
 
           .img {
             margin-left: 30px;
-            filter: grayscale(100%);
           }
         }
         .text {
