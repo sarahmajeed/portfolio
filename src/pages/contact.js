@@ -58,7 +58,7 @@ function Contact() {
               </div>
             </Fade>
             <Fade>
-              <div className="btn">Wan't to chat</div>
+              <div className="btn">Want to chat</div>
             </Fade>
           </div>
         </div>
