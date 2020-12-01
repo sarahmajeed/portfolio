@@ -19,6 +19,13 @@ function Work() {
           }
         }
       }
+      jars: file(relativePath: { eq: "components/images/happyjars.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600, maxHeight: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       face: file(relativePath: { eq: "components/images/facedetection.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 600, maxHeight: 300) {
@@ -66,7 +73,7 @@ function Work() {
             <Slide right>
               <div className="text">
                 <p className="header">
-                  Elegant Clothing - Version 1.0
+                  Elegant Clothing
                   <div className="icns">
                     <a
                       rel="noopener noreferrer"
@@ -96,6 +103,52 @@ function Work() {
             </Slide>
           </div>
 
+          <div className="project-wrapper">
+            <Slide left>
+              <div className="img-wrapper">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://distracted-babbage-2b3992.netlify.app/"
+                >
+                  <div className="plain"></div>
+
+                  <Img
+                    className="img"
+                    fluid={data.jars.childImageSharp.fluid}
+                  />
+                </a>
+              </div>
+            </Slide>
+            <Slide right>
+              <div className="text">
+                <p className="header">
+                  Happy Jars
+                  <div className="icns">
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href="https://github.com/Sarahmdawood/clothing-app"
+                    >
+                      <FaGithub className="git" />
+                    </a>
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href="http://elegant-clothing.web.app/"
+                    >
+                      <FaLink className="link" />
+                    </a>
+                  </div>
+                </p>
+                <p>A simple, minimalistic and responsive landing page</p>
+                <p>
+                  <h2>TECH STACK</h2>HTML5, CSS3
+                </p>
+              </div>
+            </Slide>
+          </div>
+
           <a
             rel="noopener noreferrer"
             target="_blank"
@@ -115,7 +168,7 @@ function Work() {
               <Slide right>
                 <div className="text">
                   <p className="header">
-                    Face Recognition - Version 1.0
+                    Face Recognition
                     <div className="icns">
                       <a
                         rel="noopener noreferrer"

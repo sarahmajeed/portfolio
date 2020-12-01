@@ -1,8 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Slide from "react-reveal/Slide"
-import Fade from "react-reveal/Fade"
-import reactjs from "../components/images/react.jpg"
+
 import {
   FaReact,
   FaHtml5,

@@ -59,13 +59,15 @@
 
 //-------Styling hero page---------
 #hero {
-  height: calc(100vh - 25vh);
+  margin-top: 10px;
+  height: 100%;
   //height: calc(100% - 25vh);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   margin-left: 5%;
+
   .react,
   .css,
   .node,
@@ -77,6 +79,7 @@
   }
 
   .section {
+    margin-top: 50px;
     width: 60px;
     min-width: 100%;
 
@@ -110,6 +113,7 @@
     margin-top: 30px;
     display: flex;
     flex-direction: column;
+    // margin-right: 50px;
     .btn {
       position: relative;
       z-index: 1;
@@ -273,13 +277,16 @@
       width: 90vw;
       position: relative;
       margin-bottom: 80px;
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-      padding: 20px;
-      align-items: center;
+      display: flex;
+      // grid-template-rows: 1fr 1fr;
+      flex-direction: column;
+
+      //padding: 20px;
+      //align-items: center;
       // background-color: rgba(129, 0, 61, 0.5);
       .gatsbyimage {
-        width: 400px;
+        width: 250px;
+        margin-bottom: 10px;
       }
       .overlay {
         .head {
@@ -323,9 +330,12 @@
 //-------Styling work page---------
 #work {
   height: 100%;
-  // width: 100%;
+
   a {
     text-decoration: none;
+  }
+  .main {
+    margin-top: 15px;
   }
   .project-wrapper {
     display: flex;
@@ -333,12 +343,12 @@
     flex-direction: column;
     align-items: center;
 
-    margin-bottom: 200px;
+    margin-bottom: 150px;
     .img-wrapper {
       position: relative;
 
-      height: 200px;
-      width: 320px;
+      height: 300px;
+      width: 400px;
       transition: all 0.5s ease-out;
 
       &:hover {
@@ -478,8 +488,7 @@
 }
 
 //---------Responsiveness ------
-@media only screen and (min-width: 666px) {
-}
+
 @media only screen and (min-width: 1111px) {
   #work {
     height: 100%;
@@ -488,7 +497,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      //justify-content: center;
 
       a {
         text-decoration: none;
@@ -497,8 +506,8 @@
         max-width: 100%;
         display: grid;
         grid-template-columns: 1fr auto;
-        align-items: center;
-        justify-content: start;
+        // align-items: center;
+        //justify-content: start;
 
         width: 80vw;
 
@@ -554,30 +563,29 @@
     }
   }
 }
-@media only screen and (min-width: 1022px) {
-  #blog {
+@media only screen and (min-height: 720px) {
+  #hero {
+    height: calc(100vh - 25vh);
+
+    //justify-content: start;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 770px) {
   #blog {
     height: 100%;
 
     .blog-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       .blog-card {
-        width: 90vw;
-        position: relative;
         margin-bottom: 80px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         padding: 20px;
         align-items: center;
-        // background-color: rgba(129, 0, 61, 0.5);
         .gatsbyimage {
           width: 400px;
+          margin-right: 20px;
         }
         .overlay {
           .head {
@@ -617,6 +625,8 @@
       }
     }
   }
+}
+@media only screen and (min-width: 768px) {
   #hero {
     position: relative;
     height: calc(100vh - 25vh);
