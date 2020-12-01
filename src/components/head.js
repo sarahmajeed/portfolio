@@ -14,10 +14,10 @@ function Head({ title }) {
   `)
   return (
     <Helmet title={`${title} | ${data.site.siteMetadata.title}`}>
-      <link
+      {/* <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300"
         rel="stylesheet"
-      />
+      /> */}
     </Helmet>
   )
 }
