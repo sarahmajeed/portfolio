@@ -44,6 +44,16 @@ module.exports = {
     //   },
     // },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Poppins`,
+          `Poppins\:300,400,400i,700`, // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
+    {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
         threshold: 1, // Percentage of an element's area that needs to be visible to launch animation
