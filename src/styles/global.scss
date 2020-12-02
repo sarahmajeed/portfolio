@@ -336,67 +336,127 @@
   }
   .main {
     margin-top: 15px;
-  }
-  .project-wrapper {
     display: flex;
-
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
-    margin-bottom: 150px;
-    .img-wrapper {
-      position: relative;
+    .project-wrapper {
+      width: 500px;
 
-      height: 300px;
-      width: 400px;
-      transition: all 0.5s ease-out;
+      //margin-left: 150px;
 
-      &:hover {
-        cursor: pointer;
+      margin-bottom: 150px;
+      .img-wrapper {
+        position: relative;
 
+        height: 220px;
+        width: 350px;
+
+        transition: all 0.5s ease-out;
+
+        &:hover {
+          cursor: pointer;
+
+          .img {
+            // filter: grayscale(0);
+            border: 4px solid white;
+          }
+        }
+        .plain {
+          display: none;
+        }
         .img {
-          // filter: grayscale(0);
-          border: 4px solid white;
+          height: auto;
+          width: auto;
+          max-width: 100%;
+          max-height: 90%;
         }
       }
-      .plain {
-        display: none;
-      }
-      .img {
-        height: auto;
-        width: auto;
-        max-width: 100%;
+      .text {
+        max-width: 80%;
         max-height: 90%;
-      }
-    }
-    .text {
-      max-width: 80%;
-      max-height: 90%;
 
-      //margin: 10px 0px;
-      padding: 20px;
-      background-color: transparent;
+        //margin: 10px 0px;
+        padding: 20px;
+        background-color: transparent;
 
-      p {
-        color: white;
-        margin-bottom: 10px;
-        opacity: 1;
-      }
-      .header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-size: 1.5em;
+        p {
+          color: white;
+          margin-bottom: 10px;
+          opacity: 1;
+        }
+        .header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-size: 1.5em;
 
-        .icns {
-          .git,
-          .link {
-            margin-right: 10px;
-            &:hover {
-              transform: translateY(-10%);
+          .icns {
+            .git,
+            .link {
+              margin-right: 10px;
+              &:hover {
+                transform: translateY(-10%);
+              }
             }
           }
         }
+      }
+    }
+  }
+}
+// ------ Styling talks page ------
+#talks {
+  height: 100vh;
+  a {
+    text-decoration: none;
+  }
+  .talk-wrapper {
+    margin: 40px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .preview {
+      // height: 300px;
+      // width: 300px;
+      position: relative;
+      transition: all 3s ease-in;
+      .overlay {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 300px;
+        width: 300px;
+
+        transition: all 3s ease-out;
+
+        .icon {
+          position: absolute;
+          top: 30%;
+          left: 45%;
+        }
+      }
+      .img {
+        // height: 300px;
+        // width: 300px;
+      }
+      &:hover {
+        .overlay {
+          display: block;
+        }
+
+        cursor: pointer;
+      }
+    }
+    .description {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      text-align: left;
+      .btn {
+        margin-top: 30px;
       }
     }
   }
@@ -497,7 +557,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      //justify-content: center;
+      justify-content: center;
 
       a {
         text-decoration: none;
@@ -506,8 +566,7 @@
         max-width: 100%;
         display: grid;
         grid-template-columns: 1fr auto;
-        // align-items: center;
-        //justify-content: start;
+        //align-items: center;
 
         width: 80vw;
 
@@ -689,88 +748,6 @@
         }
       }
     }
-
-    //   .react,
-    //   .css,
-    //   .node,
-    //   .db,
-    //   .sass,
-    //   .html,
-    //   .js {
-    //     position: absolute;
-    //     display: block;
-    //     transition: all 0.3s ease-out;
-    //   }
-    // }
-    // .react {
-    //   top: 80%;
-    //   left: 7%;
-
-    //   & > * {
-    //     fill: rgba(1, 1, 1, 0.3);
-    //   }
-    //   &:hover {
-    //     transform: translateX(10px) translateY(10px);
-    //   }
-    // }
-    // .node {
-    //   left: 10%;
-    //   top: 10%;
-    //   & > * {
-    //     fill: rgba(1, 1, 1, 0.3);
-    //   }
-    //   &:hover {
-    //     transform: translateX(-10px) translateY(-10px);
-    //   }
-    // }
-    // .sass {
-    //   right: 5%;
-    //   & > * {
-    //     fill: rgba(20, 30, 48, 0.8);
-    //   }
-    //   &:hover {
-    //     transform: translateX(10px) translateY(10px);
-    //   }
-    // }
-    // .db {
-    //   right: 20%;
-    //   top: 10%;
-    //   & > * {
-    //     fill: rgba(20, 30, 48, 0.6);
-    //   }
-    //   &:hover {
-    //     transform: translateX(10px) translateY(-10px);
-    //   }
-    // }
-    // .js {
-    //   top: 80%;
-    //   right: 20%;
-    //   & > * {
-    //     fill: rgba(1, 1, 1, 0.3);
-    //   }
-    //   &:hover {
-    //     transform: translateX(-10px) translateY(10px);
-    //   }
-    // }
-    // .html {
-    //   top: 40%;
-    //   left: 15%;
-    //   & > * {
-    //     fill: rgba(1, 1, 1, 0.3);
-    //   }
-    //   &:hover {
-    //     transform: translateX(10px) translateY(10px);
-    //   }
-    // }
-    // .css {
-    //   left: 0;
-    //   & > * {
-    //     fill: rgba(1, 1, 1, 0.3);
-    //   }
-    //   &:hover {
-    //     transform: translateX(-10px) translateY(10px);
-    //   }
-    // }
   }
 
   #about {

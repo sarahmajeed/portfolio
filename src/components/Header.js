@@ -37,16 +37,13 @@ const Header = () => {
         <Link className="work" to="/work">
           Work
         </Link>
+        <Link className="talk" to="/talk">
+          Talks
+        </Link>
         <Link className="contact" to="/contact">
           {" "}
           Contact
         </Link>
-
-        {/* <div onClick={openNav} id="hidden-burger">
-          <span className="top"></span>
-          <span className="middle"></span>
-          <span className="bottom"></span>
-        </div> */}
       </div>
     </div>
   )
