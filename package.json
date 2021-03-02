@@ -35,7 +35,8 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",
     "react-responsive-animate-navbar": "^1.1.8",
-    "react-reveal": "^1.2.2"
+    "react-reveal": "^1.2.2",
+    "react-typing-effect": "^2.0.4"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",

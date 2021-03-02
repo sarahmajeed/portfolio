@@ -11,7 +11,7 @@ function Talk() {
     query {
       web: file(relativePath: { eq: "components/images/webGuide.jpeg" }) {
         childImageSharp {
-          fluid(maxWidth: 300, maxHeight: 300) {
+          fluid(maxWidth: 600, maxHeight: 400) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -22,30 +22,32 @@ function Talk() {
     <div className="main" id="talks">
       <Layout>
         <Head title="talks" />
-        <div className="talk-wrapper">
-          <a
-            target="_blank"
-            href="https://www.youtube.com/watch?v=uJVQIVg6BtY"
-            className="preview"
-          >
-            <div className="overlay">
-              <FaYoutube className="icon" size={99} />
-            </div>
-
-            <Img className="img" fluid={data.web.childImageSharp.fluid} />
-          </a>
-          <div className="description">
-            A beginners Guide to web development is a complete and thorough
-            guide for people who plan to learn web development. It contains the
-            market value and the complete developer roadmap. Moreover, all
-            relevant questions are taken up.
+        <div className="body-wrapper">
+          <div className="talk-wrapper">
             <a
-              className="btn"
               target="_blank"
               href="https://www.youtube.com/watch?v=uJVQIVg6BtY"
+              className="preview"
             >
-              View >
+              <div className="overlay">
+                <FaYoutube className="icon" size={44} />
+              </div>
+
+              <Img className="img" fluid={data.web.childImageSharp.fluid} />
             </a>
+            <div className="description">
+              A beginners Guide to web development is a complete and thorough
+              guide for people who plan to learn web development. It contains
+              the market value and the complete developer roadmap. Moreover, all
+              relevant questions are taken up.
+              <a
+                className="btn"
+                target="_blank"
+                href="https://www.youtube.com/watch?v=uJVQIVg6BtY"
+              >
+                View >
+              </a>
+            </div>
           </div>
         </div>
       </Layout>

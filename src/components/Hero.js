@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Slide from "react-reveal/Slide"
+import ReactTypingEffect from "react-typing-effect"
 
 import {
   FaReact,
@@ -54,10 +55,22 @@ function Hero() {
               </div>
             </div>
 
-            <h1 className="profession">
+            {/* <h1 className="profession">
               {data.site.siteMetadata.description}.
-            </h1>
-            <p>CSS / JavaScript / React / Node</p>
+            </h1> */}
+            <h3>
+              <ReactTypingEffect
+                eraseDelay="4000ms"
+                typingDelay="2000ms"
+                text={[
+                  "Full Stack Developer ",
+                  "Microsoft Learn Ambassador",
+                  "Freelancer",
+                  "Avid Reader",
+                ]}
+              />
+            </h3>
+            <p>JavaScript / React / Node / CSS</p>
           </Slide>
         </div>
 

@@ -49,6 +49,9 @@
       span {
         display: none;
       }
+      // .current {
+      //   border: 1px solid red;
+      // }
       .about,
       .work,
       .skills,
@@ -64,6 +67,9 @@
         &:hover {
           color: darkgrey;
         }
+        // &:target {
+        //   border: 1px solid red;
+        // }
       }
     }
   }

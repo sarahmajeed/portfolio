@@ -60,11 +60,11 @@
 //-------Styling hero page---------
 #hero {
   margin-top: 10px;
-  height: 100%;
-  //height: calc(100% - 25vh);
+  //height: 100vh;
+  height: calc(100% - 15vh);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   margin-left: 5%;
 
@@ -98,8 +98,24 @@
     .profession {
       margin-bottom: 10px;
     }
+    .list {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      height: 40px;
+      overflow: hidden;
+    }
+    .list ul {
+      list-style-type: none;
+      font-size: 25px;
+      animation: animate 10s linear;
+      animation-play-state: running;
+    }
+
     p {
-      font-size: 0.8em;
+      margin-top: 15px;
+      font-size: 0.9em;
       letter-spacing: 2px;
     }
   }
@@ -418,29 +434,33 @@
     flex-direction: column;
     justify-content: center;
     .preview {
-      // height: 300px;
-      // width: 300px;
+      height: 220px;
+      width: 350px;
+
       position: relative;
       transition: all 3s ease-in;
       .overlay {
         display: none;
         position: absolute;
         z-index: 99;
-        background-color: rgba(0, 0, 0, 0.5);
-        height: 300px;
-        width: 300px;
+        // background-color: rgba(0, 0, 0, 0.5);
+        height: 400px;
+        width: 600px;
 
         transition: all 3s ease-out;
 
         .icon {
           position: absolute;
-          top: 30%;
-          left: 45%;
+          top: 40%;
+          left: 50%;
+          & > * {
+            fill: #ff0000;
+          }
         }
       }
       .img {
-        // height: 300px;
-        // width: 300px;
+        height: 220px;
+        width: 350px;
       }
       &:hover {
         .overlay {
@@ -622,6 +642,7 @@
     }
   }
 }
+
 @media only screen and (min-height: 720px) {
   #hero {
     height: calc(100vh - 25vh);
@@ -679,6 +700,73 @@
             &:hover::after {
               transform: scaleY(1);
             }
+          }
+        }
+      }
+    }
+  }
+  #talks {
+    height: 100vh;
+
+    a {
+      text-decoration: none;
+    }
+    .body-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .talk-wrapper {
+        margin: 40px 10px;
+        max-width: 400px;
+        // display: grid;
+        // grid-template-columns: 1fr 2fr;
+        justify-content: center;
+        align-items: center;
+        .preview {
+          height: 220px;
+          width: 350px;
+
+          position: relative;
+          transition: all 3s ease-in;
+          .overlay {
+            display: none;
+            position: absolute;
+            z-index: 99;
+            // background-color: rgba(0, 0, 0, 0.5);
+            height: 400px;
+            width: 600px;
+
+            transition: all 3s ease-out;
+
+            .icon {
+              position: absolute;
+              top: 40%;
+              left: 50%;
+              & > * {
+                fill: grey;
+              }
+            }
+          }
+          .img {
+            height: 220px;
+            width: 350px;
+          }
+          &:hover {
+            .overlay {
+              display: block;
+            }
+
+            cursor: pointer;
+          }
+        }
+        .description {
+          display: flex;
+          flex-direction: column;
+          margin-top: 20px;
+          text-align: left;
+          margin-left: 20px;
+          .btn {
+            margin-top: 30px;
           }
         }
       }
@@ -888,6 +976,14 @@
       }
     }
   }
+  @media only screen and (min-width: 602px) {
+    #hero {
+      border: "10px solid red";
+      .flex-wrapper {
+        display: "flex";
+      }
+    }
+  }
 
   //ANIMATIONS
   @keyframes imageanimation {
@@ -903,5 +999,47 @@
     100% {
       transform: translateY(0%);
     }
+  }
+}
+
+@keyframes animate {
+  // 0% {
+  //   content: "Full Stack Web Developer";
+  // }
+  // 25% {
+  //   content: "Woman in Tech";
+  // }
+
+  // 50% {
+  //   content: "Freelancer";
+  // }
+  // 70% {
+  //   content: "Microsoft Learn Ambassador";
+  // }
+
+  // 100% {
+  //   content: "Avid Reader";
+  // }
+  0% {
+    transform: translateY(0px);
+  }
+  15% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(-40px);
+  }
+  45% {
+    transform: translateY(-40px);
+  }
+  60% {
+    transform: translateY(-80px);
+  }
+  75% {
+    transform: translateY(-80px);
+  }
+  90%,
+  100% {
+    transform: translateY(-120px);
   }
 }

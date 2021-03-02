@@ -22,7 +22,7 @@ const Header = () => {
 
       <div className="links">
         <span className="hidden">></span>
-        <Link className="home" to="/">
+        <Link className="home current" to="/">
           Home
         </Link>
         <Link className="about" to="/about">
